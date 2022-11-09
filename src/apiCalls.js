@@ -2,12 +2,15 @@ const getTeas = () => {
   return fetch('http://localhost:9000/api/v1/teas')
     .then((resp) => {
     if (!resp.ok) {
-      throw new Error(resp.statusText)
+      throw new Error(resp.statusCode)
     }
-    console.log(resp)
     return resp.json()
   })
 }
+
+// const getSingleTea = () => {
+
+// }
 
 const postMessage = (newMessage) => {
   return fetch('http://localhost:9000/api/v1/comments', {
@@ -19,7 +22,7 @@ const postMessage = (newMessage) => {
   })
   .then((resp) => {
     if (!resp.ok) {
-      throw new Error(resp.statusText)
+      throw new Error(resp.statusCode)
     }
     console.log(resp)
     return resp.json()

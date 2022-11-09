@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Header from '../Header/Header'
+
+import { getTeas, postMessage } from '../../apiCalls.js'
 
 import './App.css';
 
@@ -11,9 +14,18 @@ class App extends Component {
     }
   }
 
+  componentDidMount = () => {
+    getTeas()
+      .then(data => this.setState({ teas: data }))
+      .catch(error => this.setState({ error: error.message }))
+  }
+
   render() {
     return (
-      <h1>Hello World :)</h1>
+      <main className='App'>
+        <Header />
+
+      </main>
     )
   }
 
