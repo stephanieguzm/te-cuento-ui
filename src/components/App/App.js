@@ -32,24 +32,34 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-        {!this.state.teas.length 
-        ? <Error errorMessage={this.state.error} returnHome={this.returnHome}/>
-        : <Switch>
-          <Route 
-            exact path='/' 
-            render={() => {
-              return <TeaContainer teas={this.state.teas} returnHome={this.returnHome} />
-            }}
-          />
-          <Route 
-            exact path='/:id'
-            render={({ match }) => {
-              const teaId = match.params.id
-              return <TeaPage selectedTea={teaId} returnHome={this.returnHome} />
-            }}
+        <div className='components-container'>
+          {!this.state.teas.length 
+          ? <Error 
+            errorMessage={this.state.error} 
+            returnHome={this.returnHome} />
+          : <Switch>
+            <Route 
+              exact path='/' 
+              render={() => {
+                return <TeaContainer 
+                teas={this.state.teas} 
+                returnHome={this.returnHome} />
+              }}
             />
-        </Switch>
-        }
+            <Route 
+              exact path='/:id'
+              render={({ match }) => {
+                const teaId = match.params.id
+                return <TeaPage 
+                  teas={this.state.teas} 
+                  selectedTea={parseInt(teaId)} 
+                  returnHome={this.returnHome}
+                  errorMessage={this.state.error} />
+              }}
+            />
+          </Switch>
+          }
+        </div>
       </main>
     )
   }
