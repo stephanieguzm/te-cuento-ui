@@ -1,6 +1,7 @@
 import { Component } from "react"
 import CommentForm from '../CommentForm/CommentForm'
 import CommentSection from '../CommentSection/CommentSection'
+import Error from '../Error/Error'
 import { getComments } from '../../apiCalls'
 
 class CommentsContainer extends Component {
@@ -8,18 +9,18 @@ class CommentsContainer extends Component {
     super()
     this.state = {
       teaComments: [],
-      error: false,
-      loading: true
+      error: '',
     }
   }
 
   componentDidMount = () => {
     getComments()
       .then(data => {
-        const filteredComments = data.filter(comment => comment.tea_id === parseInt(this.props.tea_id))
+        const filteredComments = data.filter(comment => comment.tea_id === this.props.tea_id)
         this.setState({ teaComments: filteredComments })
-      }
-    )
+      })
+      .catch(error => 
+        this.setState({ error: `${error.message}. It looks like we don't have comments for this tea. Why don't you start the conversation?` }))
   }
 
   getUpdatedComments = (newComment) => {
@@ -28,15 +29,22 @@ class CommentsContainer extends Component {
 
   render() {
     return (
-      <div className='comments-container'>
+      <> 
+      {!this.state.teaComments.length 
+        ? <Error 
+          errorMessage={this.state.error} 
+          returnHome={this.returnHome} />
+        : <div className='comments-container'>
         <CommentForm 
-          tea_id={parseInt(this.props.tea_id)} 
+          tea_id={this.props.tea_id} 
           getUpdatedComments={this.getUpdatedComments}
-        />
+          />
         <CommentSection 
           teaComments={this.state.teaComments}
-        />
+          />
       </div>
+        }
+      </>
     )
   }
 }
