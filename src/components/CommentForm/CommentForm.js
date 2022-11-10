@@ -26,7 +26,7 @@ class CommentForm extends Component {
 
   setMessage = () => {
     const id = random()
-    const tea_id = parseInt(this.props.tea_id)
+    const tea_id = this.props.tea_id
     const newMessage = {
       id, 
       tea_id, 
