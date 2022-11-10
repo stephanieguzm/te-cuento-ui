@@ -30,7 +30,6 @@ const postComment = (newComment) => {
     if (!resp.ok) {
       throw new Error(resp.statusCode)
     }
-    console.log(resp)
     return resp.json()
   })
 }

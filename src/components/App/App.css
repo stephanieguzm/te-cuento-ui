@@ -21,3 +21,24 @@
 a:link {
   text-decoration: none;
 }
+
+.spinner {
+  margin: auto;
+  /* margin-left: 6em;
+  margin-right: 6em; */
+  display: block;
+  /* float: left; */
+  border: 25px solid rgb(0, 0, 0);
+  width: 1px;
+  height: 1px;
+  border-radius: 50px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: 1.5s spin infinite ease-in-out;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(720deg) scale(0.6); -webkit-filter: blur(3px); }
+  100% { transform: rotate(0deg) scale(1); }
+}
