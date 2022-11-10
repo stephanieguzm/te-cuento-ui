@@ -18,13 +18,13 @@ const getComments = () => {
   })
 }
 
-const postMessage = (newMessage) => {
+const postComment = (newComment) => {
   return fetch('http://localhost:9000/api/v1/comments', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(newMessage)
+    body: JSON.stringify(newComment)
   })
   .then((resp) => {
     if (!resp.ok) {
@@ -35,4 +35,4 @@ const postMessage = (newMessage) => {
   })
 }
 
-export { getTeas, postMessage, getComments }
+export { getTeas, postComment, getComments }

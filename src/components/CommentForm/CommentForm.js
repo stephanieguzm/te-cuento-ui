@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { postMessage } from '../../apiCalls'
+import { postComment } from '../../apiCalls'
 import uniqueRandom from 'unique-random';
 
 import './CommentForm.css';
@@ -21,19 +21,20 @@ class CommentForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.setMessage()
+    this.submitComment()
   }
 
-  setMessage = () => {
+  submitComment = () => {
     const id = random()
     const tea_id = this.props.tea_id
-    const newMessage = {
+    const newComment = {
       id, 
       tea_id, 
       ... this.state
     }
-    console.log(newMessage)
-    postMessage(newMessage)
+    console.log(newComment)
+    postComment(newComment)
+    this.props.getUpdatedComments(newComment)
     this.clearInputs()
   }
 

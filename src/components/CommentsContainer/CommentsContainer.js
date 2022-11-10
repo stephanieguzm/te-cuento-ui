@@ -18,16 +18,24 @@ class CommentsContainer extends Component {
       .then(data => {
         const filteredComments = data.filter(comment => comment.tea_id === parseInt(this.props.tea_id))
         this.setState({ teaComments: filteredComments })
-        }
+      }
+    )
+  }
 
-      )}
-  
+  getUpdatedComments = (newComment) => {
+    this.setState({ teaComments: [newComment, ...this.state.teaComments] })
+  }
 
   render() {
     return (
       <div className='comments-container'>
-        <CommentForm tea_id={parseInt(this.props.tea_id)} />
-        <CommentSection teaComments={this.state.teaComments} />
+        <CommentForm 
+          tea_id={parseInt(this.props.tea_id)} 
+          getUpdatedComments={this.getUpdatedComments}
+        />
+        <CommentSection 
+          teaComments={this.state.teaComments}
+        />
       </div>
     )
   }
