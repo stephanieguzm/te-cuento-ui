@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
 import Header from '../Header/Header'
+import TeaContainer from '../TeaContainer/TeaContainer'
+import TeaPage from '../TeaPage/TeaPage'
 
-import { getTeas, postMessage } from '../../apiCalls.js'
+import { getTeas } from '../../apiCalls.js'
 
 import './App.css';
 
@@ -10,7 +13,7 @@ class App extends Component {
     super()
     this.state = {
       teas: [],
-      error: ''
+      error: false
     }
   }
 
@@ -24,11 +27,25 @@ class App extends Component {
     return (
       <main className='App'>
         <Header />
-
+        <Switch>
+          <Route 
+            exact path='/:id'
+            render={({ match }) => {
+              const teaId = match.params.id
+              return <TeaPage selectedTea={teaId}/>
+            }}
+          />
+          <Route 
+            exact path='/' 
+            render={() => {
+              return <TeaContainer teas={this.state.teas}/>
+            }}
+          />
+        </Switch>
       </main>
     )
   }
 
 }
 
-export default App;
+export default App
