@@ -8,9 +8,15 @@ const getTeas = () => {
   })
 }
 
-// const getSingleTea = () => {
-
-// }
+const getComments = () => {
+  return fetch('http://localhost:9000/api/v1/comments')
+    .then((resp) => {
+    if (!resp.ok) {
+      throw new Error(resp.statusCode)
+    }
+    return resp.json()
+  })
+}
 
 const postMessage = (newMessage) => {
   return fetch('http://localhost:9000/api/v1/comments', {
@@ -29,4 +35,4 @@ const postMessage = (newMessage) => {
   })
 }
 
-export { getTeas, postMessage }
+export { getTeas, postMessage, getComments }
