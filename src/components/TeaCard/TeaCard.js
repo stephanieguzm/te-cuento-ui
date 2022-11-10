@@ -5,10 +5,10 @@ import './TeaCard.css'
 const TeaCard = ({ id, name, type, img }) => {
   return (
     <Link to={`/${id}`}>
-      <div className='tea-card' id={id}>
-        <h3>{name}</h3>
-        <p>{type}</p>
-        <img src={img} alt={name}/>
+      <div className='tea-card' id={id} data-cy='card'>
+        <h3 className='card-title'>{name}</h3>
+        <p className='card-p'>{type}</p>
+        <img className='card-img' src={img} alt={name}/>
       </div>
     </Link>
   )
