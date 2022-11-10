@@ -58,8 +58,8 @@ class App extends Component {
                 />
             </Switch>
             : <Error 
-            errorMessage={this.state.error} 
-            returnHome={this.returnHome} />
+              errorMessage={this.state.error} 
+              returnHome={this.returnHome} />
           }
             {!this.state.teas.length && !this.state.error && <p className='spinner' data-cy='spinner'></p>}
           </div>
