@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Comment = ({ id, user_name, user_message }) => {
   return (
     <div className='comment-card' id={id}>

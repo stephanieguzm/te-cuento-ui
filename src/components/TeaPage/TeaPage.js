@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import CommentsContainer from '../CommentsContainer/CommentsContainer'
 import './TeaPage.css';
 
