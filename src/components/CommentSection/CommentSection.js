@@ -1,4 +1,3 @@
-import React from 'react'
 import Comment from '../Comment/Comment'
 
 const CommentSection = ({ teaComments }) => {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { postComment } from '../../apiCalls'
 import uniqueRandom from 'unique-random';
 

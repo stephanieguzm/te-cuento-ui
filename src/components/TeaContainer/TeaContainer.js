@@ -1,4 +1,3 @@
-import React from 'react';
 import TeaCard from '../TeaCard/TeaCard'
 import './TeaContainer.css';
 
