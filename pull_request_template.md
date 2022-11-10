@@ -15,6 +15,7 @@ Please describe the tests that you ran to verify your changes.
 
 - [ ] I tested my changes in the browser
 - [ ] I tested with Mocha/Chai
+- [ ] I tested with Cypress
 
 # Checklist:
 
