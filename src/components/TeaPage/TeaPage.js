@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-// import Form from '../Form/Form'
-// import { Link } from 'react-router-dom'; 
+import CommentsContainer from '../CommentsContainer/CommentsContainer'
 import './TeaPage.css';
 
 class TeaPage extends Component {
@@ -40,9 +39,9 @@ class TeaPage extends Component {
           <p>Brew at {tea.temperature} for {tea.brewTime} minutes</p>
           <img src={tea.img} alt={tea.name}/>
         </div>
-        {/* <Form 
-          tea_id={this.props.selectedTea}
-        /> */}
+        <div className='comments-container'>
+          <CommentsContainer tea_id={this.props.selectedTea}/>
+        </div>
       </div>
     )
   }
