@@ -11,7 +11,7 @@ const CommentSection = ({ teaComments }) => {
   }) 
   return (
     <section className='comments-section'>
-      <h1>THIS WORKS!</h1>
+      <h1>Share Your Thoughts with Us!</h1>
       {commentCards}
     </section>
   )

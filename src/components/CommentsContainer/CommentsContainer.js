@@ -33,7 +33,7 @@ class CommentsContainer extends Component {
       {!this.state.teaComments.length 
         ? <Error 
           errorMessage={this.state.error} 
-          returnHome={this.returnHome} />
+          returnHome={this.props.returnHome} />
         : <div className='comments-container'>
         <CommentForm 
           tea_id={this.props.tea_id} 
@@ -41,7 +41,8 @@ class CommentsContainer extends Component {
           />
         <CommentSection 
           teaComments={this.state.teaComments}
-          />
+          returnHome={this.props.returnHome}
+        />
       </div>
         }
       </>

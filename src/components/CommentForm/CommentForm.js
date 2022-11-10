@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import { postComment } from '../../apiCalls'
 import uniqueRandom from 'unique-random';
+import Error from '../Error/Error'
 
 import './CommentForm.css';
 
@@ -29,11 +30,15 @@ class CommentForm extends Component {
     const tea_id = this.props.tea_id
     const newComment = {
       id, 
-      tea_id, 
-      ... this.state
+      tea_id,
+      ...this.state
     }
     console.log(newComment)
     postComment(newComment)
+      .catch(error => {
+        this.setState({ error: `Oops, we encountered an issue submitting your comment. Please try again.` })
+      })
+    
     this.props.getUpdatedComments(newComment)
     this.clearInputs()
   }
@@ -44,6 +49,7 @@ class CommentForm extends Component {
 
   render() {
     return (
+      <>
       <form>
         <input 
           type='text'
@@ -51,17 +57,21 @@ class CommentForm extends Component {
           placeholder='Your Name'
           value={this.state.user_name}
           onChange={(event) => this.handleChange(event)}
-        />
+          />
         <input 
           type='textarea'
           name='user_message'
           placeholder='Share your thoughts here'
           value={this.state.user_message}
           onChange={(event) => this.handleChange(event)}
-        />
-      
+          />
         <button onClick={(event) => this.handleSubmit(event)}>Submit</button>
     </form>
+      {this.state.error && <Error 
+        errorMessage={this.state.error}
+        returnHome={this.props.returnHome}
+      />}
+    </>
   )
 }
 

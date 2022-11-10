@@ -50,7 +50,10 @@ class TeaPage extends Component {
             <img src={tea.img} alt={tea.name}/>
           </div>
           <div className='comments-container'>
-            <CommentsContainer tea_id={this.props.selectedTea}/>
+            <CommentsContainer 
+              tea_id={this.props.selectedTea}
+              returnHome={this.props.returnHome}
+            />
           </div>
         </div>
         }
