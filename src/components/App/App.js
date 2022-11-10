@@ -59,6 +59,7 @@ class App extends Component {
             />
           </Switch>
           }
+          {!this.state.teas.length && !this.state.error && <p className="spinner"></p>}
         </div>
       </main>
     )

@@ -43,8 +43,9 @@ class CommentsContainer extends Component {
           teaComments={this.state.teaComments}
           returnHome={this.props.returnHome}
         />
-      </div>
-        }
+        </div>
+      }
+      {!this.state.teaComments.length && !this.state.error && <p className="spinner"></p>}
       </>
     )
   }
