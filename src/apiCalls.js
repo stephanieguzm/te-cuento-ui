@@ -30,7 +30,6 @@ const postComment = (newComment) => {
     if (!resp.ok) {
       throw new Error(`${resp.statusCode}: Oops, we encountered an issue submitting your comment. Please try again.`)
     }
-    console.log(resp)
     return resp.json()
   })
 }

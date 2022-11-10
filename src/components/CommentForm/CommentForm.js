@@ -57,14 +57,14 @@ class CommentForm extends Component {
           placeholder='Your Name'
           value={this.state.user_name}
           onChange={(event) => this.handleChange(event)}
-          />
+        />
         <input 
           type='textarea'
           name='user_message'
           placeholder='Share your thoughts here'
           value={this.state.user_message}
           onChange={(event) => this.handleChange(event)}
-          />
+        />
         <button onClick={(event) => this.handleSubmit(event)}>Submit</button>
     </form>
       {this.state.error && <Error 

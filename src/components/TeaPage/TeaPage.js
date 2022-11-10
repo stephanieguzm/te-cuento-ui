@@ -15,7 +15,6 @@ class TeaPage extends Component {
   componentDidMount = () => {
     const matchingTea = this.props.teas.find( tea => tea.id === this.props.selectedTea)
     this.setState({tea: matchingTea})
-    console.log(matchingTea)
   }
   
   // componentDidMount() {
@@ -41,14 +40,14 @@ class TeaPage extends Component {
         {!this.state.tea
         ? <Error errorMessage={this.state.error} returnHome={this.returnHome} />
         : <div className='tea-page-container'>
-          <div className='tea-info' id={tea.id}>
-            <h3>{tea.name}</h3>
-            <p>{tea.description}</p>
-            <p>Originated from {tea.origin}</p>
-            <h4>Make the perfect cup</h4>
-            <p>Brew at {tea.temperature} for {tea.brewTime} minutes</p>
-            <img src={tea.img} alt={tea.name}/>
-          </div>
+            <div className='tea-info' id={tea.id}>
+              <h3>{tea.name}</h3>
+              <p>{tea.description}</p>
+              <p>Originated from {tea.origin}</p>
+              <h4>Make the perfect cup</h4>
+              <p>Brew at {tea.temperature} for {tea.brewTime} minutes</p>
+              <img src={tea.img} alt={tea.name}/>
+            </div>
           <div className='comments-container'>
             <CommentsContainer 
               tea_id={this.props.selectedTea}

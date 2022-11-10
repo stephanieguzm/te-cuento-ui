@@ -30,22 +30,22 @@ class CommentsContainer extends Component {
   render() {
     return (
       <> 
-      {!this.state.teaComments.length 
-        ? <Error 
-          errorMessage={this.state.error} 
-          returnHome={this.props.returnHome} />
-        : <div className='comments-container'>
-        <CommentForm 
-          tea_id={this.props.tea_id} 
-          getUpdatedComments={this.getUpdatedComments}
-          />
-        <CommentSection 
-          teaComments={this.state.teaComments}
-          returnHome={this.props.returnHome}
-        />
-        </div>
-      }
-      {!this.state.teaComments.length && !this.state.error && <p className="spinner"></p>}
+        {!this.state.teaComments.length 
+          ? <Error 
+            errorMessage={this.state.error} 
+            returnHome={this.props.returnHome} />
+          : <div className='comments-container'>
+            <CommentForm 
+              tea_id={this.props.tea_id} 
+              getUpdatedComments={this.getUpdatedComments}
+            />
+            <CommentSection 
+              teaComments={this.state.teaComments}
+              returnHome={this.props.returnHome}
+            />
+          </div>
+        }
+        {!this.state.teaComments.length && !this.state.error && <p className="spinner"></p>}
       </>
     )
   }

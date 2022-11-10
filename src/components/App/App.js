@@ -33,11 +33,8 @@ class App extends Component {
       <main className='App'>
         <Header />
         <div className='components-container'>
-          {!this.state.teas.length 
-          ? <Error 
-            errorMessage={this.state.error} 
-            returnHome={this.returnHome} />
-          : <Switch>
+          {this.state.teas.length 
+          ? <Switch>
             <Route 
               exact path='/' 
               render={() => {
@@ -51,13 +48,16 @@ class App extends Component {
               render={({ match }) => {
                 const teaId = match.params.id
                 return <TeaPage 
-                  teas={this.state.teas} 
-                  selectedTea={parseInt(teaId)} 
-                  returnHome={this.returnHome}
-                  errorMessage={this.state.error} />
+                teas={this.state.teas} 
+                selectedTea={parseInt(teaId)} 
+                returnHome={this.returnHome}
+                errorMessage={this.state.error} />
               }}
             />
           </Switch>
+          : <Error 
+            errorMessage={this.state.error} 
+            returnHome={this.returnHome} />
           }
           {!this.state.teas.length && !this.state.error && <p className="spinner"></p>}
         </div>
