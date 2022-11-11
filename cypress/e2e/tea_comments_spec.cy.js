@@ -1,20 +1,23 @@
 describe('As a user, I will be able to read and add a comment about my selected tea', () => {
   
   beforeEach( () => {
-    // cy.intercept('GET', 'http://localhost:9000/api/v1/teas/3', { fixture: 'tea.json' }).as('tea')
-    // cy.intercept('GET', 'http://localhost:9000/api/v1/comments', { fixture: 'comments.json' }).as('comments')
+    cy.intercept('GET', 'http://localhost:9000/api/v1/comments', { fixture: 'comments.json' })
+      .as('comments')
     cy.visit('/3')
-    cy.wait('@tea')
+    cy.wait('@comments')
   })
 
-  it('should persist the header and footer when viewing a single tea', () => {
+  it('should display a comments section with a comment form and user comments', () => {
     cy
-      .get('[data-cy="header-container"]')
-      .get('[data-cy="app-title"]').contains('Té Cuento')
-      .get('[data-cy="nav-bar"]')
-      .get('[data-cy="home-button"]'). contains('Teas')
-      .get('[data-cy="footer-container"]')
+      .get('[data-cy="comments-container"]')
+      .get('[data-cy="comments-section"]')
+      .get('[data-cy="comments-title"]').contains('Share Your Thoughts with Us!')
+      .get('[data-cy="comment-form"]')
+      .get('[data-cy="comment-card"]').contains('Gina')
+      .get('[data-cy="comment-card"]').contains("Oh man, this is amazing. This may very well be my new favorite. It is exquisite, like drinking the essence of spring. At 3 minutes, there is absolutely no bitterness (I think I prefer 2 minutes, it is a perfect, delicate, pale green elixir). I was afraid to try it because I don't like smoky flavored tea at all. But I am getting zero smoke flavor. It's nutty, buttery, green, and fabulous!")
   })
+
+  .get('[data-cy="comment-form"]')
 
 })
 
