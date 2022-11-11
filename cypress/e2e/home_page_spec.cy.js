@@ -18,8 +18,10 @@ describe('As a user, when I visit the application, I will see the header, a list
       }
     )
     cy.visit('/')
-    cy.get('[data-cy="error-container"]').contains(`We're taking care of a kettle that's boiling over! Please visit us again later.`);
-  });
+    cy
+      .get('[data-cy="error-container"]').contains(`We're taking care of a kettle that's boiling over! Please visit us again later.`)
+      .get('[data-cy="home-button"]'). contains('Home')
+  })
 
   it('should show a user the application header with logo, title, and navigation bar', () => {
     cy
