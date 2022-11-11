@@ -6,6 +6,23 @@ describe('As a user, when I visit the application, I will see the header, a list
     cy.wait('@teas')
   })
   
+  it('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
+    cy.intercept(
+      'GET',
+      'http://localhost:9000/api/v1/teas',
+      {
+        statusCode: 500,
+        body: {
+          error: `We're taking care of a kettle that's boiling over! Please visit us again later.`,
+        },
+      }
+    )
+    cy.visit('/')
+    cy
+      .get('[data-cy="error-container"]').contains(`We're taking care of a kettle that's boiling over! Please visit us again later.`)
+      .get('[data-cy="home-button"]'). contains('Home')
+  })
+
   it('should show a user the application header with logo, title, and navigation bar', () => {
     cy
       // .get('[data-cy="logo"]')
@@ -19,10 +36,10 @@ describe('As a user, when I visit the application, I will see the header, a list
   it('should display a page loading icon while waiting for teas to display on page', () => {
     cy
       .visit('/')
-      .get('.spinner').should('exist')
+      .get('[data-cy="spinner"]').should('exist')
       .wait('@teas').then(() => {
     cy
-      .get('.spinner').should('not.exist')
+      .get('[data-cy="spinner"]').should('not.exist')
     })
   })
 
