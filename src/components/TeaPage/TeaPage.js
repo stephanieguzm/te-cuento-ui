@@ -5,6 +5,7 @@ import './TeaPage.css'
 
 const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
   const tea = teas.find( tea => tea.id === selectedTea)
+  console.log(tea)
 
   return (
     <>
@@ -13,9 +14,14 @@ const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
       : <div className='tea-page-container' data-cy='tea-page-container'>
           <div className='tea-info' id={tea.id} data-cy='tea-info'>
             <h3 className='tea-p' data-cy='tea-name'>{tea.name}</h3>
+            <p className='tea-p' data-cy='tea-type'>{tea.type} tea</p>
+            <p className='tea-p' data-cy='tea-origin'>Origin: {tea.origin}</p>
             <p className='tea-p' data-cy='tea-desc'>{tea.description}</p>
-            <p className='tea-p' data-cy='tea-origin'>Originated from {tea.origin}</p>
-            <p className='tea-p' data-cy='tea-brew'>Brew at {tea.temperature} for {tea.brewTime} minutes</p>
+            <p className='tea-p' data-cy='tea-brew'>
+              Steep for {tea.brew_time} minutes at {tea.temperature}°F 
+            </p>
+            <p className='tea-p' data-cy='tea-caffeine'>Infusions: {tea.infusions}</p>
+            <p className='tea-p' data-cy='tea-caffeine'>This tea contains a {tea.caffeine_level} level of caffeine</p>
             <img src={tea.img} alt={tea.name} data-cy='tea-img'/>
             <div>
               <p className='tea-p'>Farmer {tea.farmer}</p>
