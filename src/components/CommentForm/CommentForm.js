@@ -50,6 +50,7 @@ class CommentForm extends Component {
   render() {
     return (
       <>
+        <h2 className='title' data-cy='comments-title'>Share Your Thoughts with Us!</h2>
         <form className='comment-form' data-cy='comment-form'>
           <input 
             type='text'

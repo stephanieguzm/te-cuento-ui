@@ -10,8 +10,7 @@ const CommentSection = ({ teaComments }) => {
     />
   }) 
   return (
-    <section className='comment-section' data-cy='comment-section'>
-      <h2 className='subtitle' data-cy='comment-section-title'>Share Your Thoughts with Us!</h2>
+    <section className='comments-section' data-cy='comments-section'>
       {commentCards}
     </section>
   )
