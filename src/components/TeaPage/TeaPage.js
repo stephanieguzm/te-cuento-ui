@@ -1,65 +1,45 @@
-import { Component } from 'react'
 import CommentsContainer from '../CommentsContainer/CommentsContainer'
 import Error from '../Error/Error'
 import './TeaPage.css'
 
-class TeaPage extends Component {
-  constructor() {
-    super()
-    this.state = {
-      tea: {},
-      error: ''
-    }
-  }
 
-  componentDidMount = () => {
-    const matchingTea = this.props.teas.find( tea => tea.id === this.props.selectedTea)
-    this.setState({tea: matchingTea})
-  }
-  
-  // componentDidMount() {
-  //   fetch(`http://localhost:9000/api/v1/teas/${this.props.selectedTea}`)
-  //     .then( response=> {
-  //       if (!response.ok) {
-  //         throw new Error()
-  //       }
-  //       return response.json() 
-  //     })
-  //     .then( data => this.setState({ tea: data[0] }))
-  //     .catch( error => {
-  //       if (error) {
-  //         this.setState({ error: true })
-  //       }
-  //     })
-  // }
+const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
+  const tea = teas.find( tea => tea.id === selectedTea)
+  console.log(tea)
 
-  render() {
-    const tea = this.state.tea
-    return (
-      <>
-        {!this.state.tea
-        ? <Error errorMessage={this.state.error} returnHome={this.returnHome} />
-        : <div className='tea-page-container'>
-            <div className='tea-info' id={tea.id}>
-              <h3>{tea.name}</h3>
-              <p>{tea.description}</p>
-              <p>Originated from {tea.origin}</p>
-              <h4>Make the perfect cup</h4>
-              <p>Brew at {tea.temperature} for {tea.brewTime} minutes</p>
-              <img src={tea.img} alt={tea.name}/>
+  return (
+    <>
+      {!tea
+      ? <Error errorMessage={errorMessage} returnHome={returnHome} />
+      : <div className='tea-page-container' data-cy='tea-page-container'>
+          <div className='tea-info' id={tea.id} data-cy='tea-info'>
+            <h3 className='tea-p' data-cy='tea-name'>{tea.name}</h3>
+            <p className='tea-p' data-cy='tea-type'>{tea.type} tea</p>
+            <p className='tea-p' data-cy='tea-origin'>Origin: {tea.origin}</p>
+            <p className='tea-p' data-cy='tea-desc'>{tea.description}</p>
+            <p className='tea-p' data-cy='tea-brew'>
+              Steep for {tea.brew_time} minutes at {tea.temperature}°F 
+            </p>
+            <p className='tea-p' data-cy='tea-caffeine'>Infusions: {tea.infusions}</p>
+            <p className='tea-p' data-cy='tea-caffeine'>
+              This tea contains a {tea.caffeine_level} level of caffeine
+            </p>
+            <img src={tea.img} alt={`${tea.name} tea`} data-cy='tea-img'/>
+            <div className='farmer-container' data-cy='farmer-container'>
+              <p className='tea-p' data-cy='farmer-name'>Farmer {tea.farmer}</p>
+              <img src={tea.farmer_img} alt={`Farmer ${tea.farmer}`} data-cy='farmer-img'/>
             </div>
-          <div className='comments-container'>
-            <CommentsContainer 
-              tea_id={this.props.selectedTea}
-              returnHome={this.props.returnHome}
-            />
           </div>
+        <div className='comments-container' data-cy='comments-container'>
+          <CommentsContainer 
+            tea_id={selectedTea}
+            returnHome={returnHome}
+          />
         </div>
-        }
-      </>
-    )
-  }
-
+      </div>
+      }
+    </>
+  )
 }
 
 export default TeaPage;

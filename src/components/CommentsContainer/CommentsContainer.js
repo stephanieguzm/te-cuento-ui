@@ -34,7 +34,7 @@ class CommentsContainer extends Component {
           ? <Error 
             errorMessage={this.state.error} 
             returnHome={this.props.returnHome} />
-          : <div className='comments-container'>
+          : <div className='comments-container' data-cy='comments-container'>
             <CommentForm 
               tea_id={this.props.tea_id} 
               getUpdatedComments={this.getUpdatedComments}
@@ -45,7 +45,7 @@ class CommentsContainer extends Component {
             />
           </div>
         }
-        {!this.state.teaComments.length && !this.state.error && <p className="spinner"></p>}
+        {!this.state.teaComments.length && !this.state.error && <p className="spinner" data-cy='spinner'></p>}
       </>
     )
   }

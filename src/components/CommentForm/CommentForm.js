@@ -50,13 +50,15 @@ class CommentForm extends Component {
   render() {
     return (
       <>
-        <form>
+        <form className='comment-form' data-cy='comment-form'>
           <input 
             type='text'
             name='user_name'
             placeholder='Your Name'
             value={this.state.user_name}
             onChange={(event) => this.handleChange(event)}
+            data-cy='user_name'
+            required
           />
           <input 
             type='textarea'
@@ -64,8 +66,10 @@ class CommentForm extends Component {
             placeholder='Share your thoughts here'
             value={this.state.user_message}
             onChange={(event) => this.handleChange(event)}
+            data-cy='user_message'
+            required
           />
-          <button onClick={(event) => this.handleSubmit(event)}>Submit</button>
+          <button className='form-button' data-cy='form-button' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
         {this.state.error && <Error 
           errorMessage={this.state.error}

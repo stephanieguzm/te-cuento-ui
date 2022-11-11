@@ -13,7 +13,7 @@ const TeaContainer = ({ teas }) => {
   })
 
   return (
-    <section className='tea-container'>
+    <section className='tea-container' data-cy='tea-container'>
       {teaCards}
     </section>
   )
