@@ -74,13 +74,7 @@ class CommentForm extends Component {
           />
           <button className='form-button' data-cy='form-button' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
-        {this.state.error && <h2 className='error-message' data-cy='error-message'>{this.state.error}</h2>}
-        
-        {/* <Error 
-          errorMessage={this.state.error}
-          returnHome={this.props.returnHome}
-        />} */}
-        
+        {this.state.error && <h3 className='error-message' data-cy='error-message'>{this.state.error}</h3>}        
       </>
     )
   }
