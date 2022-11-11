@@ -56,6 +56,8 @@ class App extends Component {
                   errorMessage={this.state.error} />
                 }}
                 />
+              <Route path='*' render={() => {
+                <Error errorMessage='What the heck are you doing here?' /> }} />
             </Switch>
             : <Error 
               errorMessage={this.state.error} 

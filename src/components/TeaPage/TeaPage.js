@@ -5,7 +5,6 @@ import './TeaPage.css'
 
 const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
   const tea = teas.find( tea => tea.id === selectedTea)
-  console.log(tea)
 
   return (
     <>
@@ -20,7 +19,7 @@ const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
             <p className='tea-p' data-cy='tea-brew'>
               Steep for {tea.brew_time} minutes at {tea.temperature}°F 
             </p>
-            <p className='tea-p' data-cy='tea-caffeine'>Infusions: {tea.infusions}</p>
+            <p className='tea-p' data-cy='tea-infusions'>Infusions: {tea.infusions}</p>
             <p className='tea-p' data-cy='tea-caffeine'>
               This tea contains a {tea.caffeine_level} level of caffeine
             </p>
