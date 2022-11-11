@@ -1,0 +1,30 @@
+[
+  {
+    "id": 3,
+    "type": "green",
+    "name": "Yun Wu",
+    "img": "https://www.adagio.com/images5/products/yun_wu.jpg",
+    "origin": "Zhejiang, China",
+    "description": "Cloud and Mist Tea, or Yun Wu in Mandarin, is harvested at high altitudes on Huaguo Mountain where the fog is thick, keeping the tea bushes hydrated and protected from the sun rays. Once processed, Yun Wu tends to have characteristically irregular twisted leaves, however, it has also been seen rolled up into small pellets or spiral shapes. Its unique growing conditions yield a layered cup with fruity notes and a very light smokiness.",
+    "brew_time": "2-3",
+    "temperature": 170,
+    "infusions": 7,
+    "caffeine_level": "medium",
+    "farmer": "Zhao Bi Yun",
+    "farmer_img": "https://www.mastersteas.com/images7/farmers/product/zhao_bi_yun.jpg"
+  },
+  {
+    "id": 4,
+    "type": "oolong",
+    "name": "Traditional Yi Kuan Yin",
+    "img": "https://www.adagio.com/images5/products/traditional_ti_kuan_yin.jpg",
+    "origin": "Fujian, China",
+    "description": "This wulong strikes us as a bridge between roasted and green oolongs as it retains some floral notes, while the light roasting enhances the honey nuance. Tightly rolled Anxi grown leaf with a light roasting offers a cup that is soft with sweet honey-floral notes and a delicate flinty minerality. Nicely layered without being too overt.",
+    "brew_time": "2-3",
+    "temperature": 195,
+    "infusions": 3,
+    "caffeine_level": "medium",
+    "farmer": "He Ling",
+    "farmer_img": "https://www.mastersteas.com/images7/farmers/product/he_ling.jpg"
+  }
+]

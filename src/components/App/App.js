@@ -26,7 +26,7 @@ class App extends Component {
   componentDidMount = () => {
     getTeas()
       .then(data => this.setState({ teas: data }))
-      .catch(error => this.setState({ error: `${error.message}. We're taking care of a kettle that's boiling over! Please visit us again later.` }))
+      .catch(error => this.setState({ error: `We're taking care of a kettle that's boiling over! Please visit us again later.` }))
   }
 
   render() {
