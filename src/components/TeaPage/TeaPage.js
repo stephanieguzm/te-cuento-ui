@@ -10,16 +10,19 @@ const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
     <>
       {!tea
       ? <Error errorMessage={errorMessage} returnHome={returnHome} />
-      : <div className='tea-page-container'>
-          <div className='tea-info' id={tea.id}>
-            <h3>{tea.name}</h3>
-            <p>{tea.description}</p>
-            <p>Originated from {tea.origin}</p>
-            <h4>Make the perfect cup</h4>
-            <p>Brew at {tea.temperature} for {tea.brewTime} minutes</p>
-            <img src={tea.img} alt={tea.name}/>
+      : <div className='tea-page-container' data-cy='tea-page-container'>
+          <div className='tea-info' id={tea.id} data-cy='tea-info'>
+            <h3 className='tea-p' data-cy='tea-name'>{tea.name}</h3>
+            <p className='tea-p' data-cy='tea-desc'>{tea.description}</p>
+            <p className='tea-p' data-cy='tea-origin'>Originated from {tea.origin}</p>
+            <p className='tea-p' data-cy='tea-brew'>Brew at {tea.temperature} for {tea.brewTime} minutes</p>
+            <img src={tea.img} alt={tea.name} data-cy='tea-img'/>
+            <div>
+              <p className='tea-p'>Farmer {tea.farmer}</p>
+              <img src={tea.farmer_img} alt={`Farmer ${tea.farmer}`}data-cy='farmer-img'/>
+            </div>
           </div>
-        <div className='comments-container'>
+        <div className='comments-container' data-cy='comments-container'>
           <CommentsContainer 
             tea_id={selectedTea}
             returnHome={returnHome}
