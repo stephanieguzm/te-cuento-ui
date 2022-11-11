@@ -28,11 +28,10 @@ class CommentForm extends Component {
   submitComment = () => {
     const id = random()
     const tea_id = this.props.tea_id
-    const newComment = {
-      id, 
-      tea_id,
-      ...this.state
-    }
+    const user_name = this.state.user_name
+    const user_message = this.state.user_message
+    const newComment = { id, tea_id, user_name, user_message }
+  
     console.log(newComment)
     postComment(newComment)
       .catch(error => {
@@ -44,7 +43,7 @@ class CommentForm extends Component {
   }
 
   clearInputs = () => {
-    this.setState({ user_name: '', user_message: ''})
+    this.setState({ user_name: '', user_message: '', error: '' })
   }
 
   render() {
