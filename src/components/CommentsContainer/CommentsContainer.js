@@ -20,7 +20,7 @@ class CommentsContainer extends Component {
         this.setState({ teaComments: filteredComments })
       })
       .catch(error => 
-        this.setState({ error: `${error.message}. It looks like we don't have comments for this tea. Why don't you start the conversation?` }))
+        this.setState({ error: `${error.message} It looks like we don't have comments for this tea. Why don't you start the conversation?` }))
   }
 
   getUpdatedComments = (newComment) => {
