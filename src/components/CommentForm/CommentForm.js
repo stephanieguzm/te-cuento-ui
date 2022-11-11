@@ -22,7 +22,11 @@ class CommentForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.submitComment()
+    if (this.state.user_name && this.state.user_message) {
+      this.submitComment()
+    } else {
+      this.setState({ error: `Please fill out all fields.` })
+    }
   }
 
   submitComment = () => {
@@ -32,7 +36,6 @@ class CommentForm extends Component {
     const user_message = this.state.user_message
     const newComment = { id, tea_id, user_name, user_message }
   
-    console.log(newComment)
     postComment(newComment)
       .catch(error => {
         this.setState({ error: `Oops, we encountered an issue submitting your comment. Please try again.` })
@@ -55,26 +58,29 @@ class CommentForm extends Component {
             type='text'
             name='user_name'
             placeholder='Your Name'
+            data-cy='user_name'
             value={this.state.user_name}
             onChange={(event) => this.handleChange(event)}
-            data-cy='user_name'
             required
           />
           <input 
             type='textarea'
             name='user_message'
             placeholder='Share your thoughts here'
+            data-cy='user_message'
             value={this.state.user_message}
             onChange={(event) => this.handleChange(event)}
-            data-cy='user_message'
             required
           />
           <button className='form-button' data-cy='form-button' onClick={(event) => this.handleSubmit(event)}>Submit</button>
         </form>
-        {this.state.error && <Error 
+        {this.state.error && <h2 className='error-message' data-cy='error-message'>{this.state.error}</h2>}
+        
+        {/* <Error 
           errorMessage={this.state.error}
           returnHome={this.props.returnHome}
-        />}
+        />} */}
+        
       </>
     )
   }
