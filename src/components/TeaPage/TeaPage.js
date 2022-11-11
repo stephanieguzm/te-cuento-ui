@@ -21,11 +21,13 @@ const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
               Steep for {tea.brew_time} minutes at {tea.temperature}°F 
             </p>
             <p className='tea-p' data-cy='tea-caffeine'>Infusions: {tea.infusions}</p>
-            <p className='tea-p' data-cy='tea-caffeine'>This tea contains a {tea.caffeine_level} level of caffeine</p>
-            <img src={tea.img} alt={tea.name} data-cy='tea-img'/>
-            <div>
-              <p className='tea-p'>Farmer {tea.farmer}</p>
-              <img src={tea.farmer_img} alt={`Farmer ${tea.farmer}`}data-cy='farmer-img'/>
+            <p className='tea-p' data-cy='tea-caffeine'>
+              This tea contains a {tea.caffeine_level} level of caffeine
+            </p>
+            <img src={tea.img} alt={`${tea.name} tea`} data-cy='tea-img'/>
+            <div className='farmer-container' data-cy='farmer-container'>
+              <p className='tea-p' data-cy='farmer-name'>Farmer {tea.farmer}</p>
+              <img src={tea.farmer_img} alt={`Farmer ${tea.farmer}`} data-cy='farmer-img'/>
             </div>
           </div>
         <div className='comments-container' data-cy='comments-container'>
