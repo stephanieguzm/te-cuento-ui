@@ -20,7 +20,7 @@ const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
               <p className='tea-p' data-cy='tea-brew'>
                 Steep for {tea.brew_time} minutes at {tea.temperature}°F 
               </p>
-                This tea contains a {tea.caffeine_level} level of caffeine
+              <p className='tea-p'>This tea contains a {tea.caffeine_level} level of caffeine</p>
               <p className='tea-p' data-cy='tea-infusions'>Infusions: {tea.infusions}</p>
               <p className='tea-p' data-cy='tea-caffeine'>
               </p>

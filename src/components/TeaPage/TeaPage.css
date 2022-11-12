@@ -2,7 +2,7 @@
 .desc-farmer {
   display: flex;
   justify-content: row;
-  margin-bottom: calc(4vh - 10px);
+  margin-bottom: calc(8vh - 10px);
 }
 
 .tea-header-details {

@@ -12,7 +12,7 @@ const CommentSection = ({ teaComments }) => {
   }) 
   return (
     <section className='comments-section' data-cy='comments-section'>
-      <h2 className='comments-title'>Comments</h2>
+      <h3 className='comments-title'>Comments</h3>
       {commentCards}
     </section>
   )
