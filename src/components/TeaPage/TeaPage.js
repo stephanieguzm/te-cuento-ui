@@ -1,14 +1,16 @@
 import CommentsContainer from '../CommentsContainer/CommentsContainer'
 import Error from '../Error/Error'
+
 import './TeaPage.css'
 
-
 const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
+  //move find to App
   const tea = teas.find( tea => tea.id === selectedTea)
 
   return (
     <>
       {!tea
+      //you could just render an error message here if you decide to pass the error message
       ? <Error errorMessage={errorMessage} returnHome={returnHome} />
       : <div className='tea-page-container' data-cy='tea-page-container'>
           <div className='tea-info' id={tea.id} data-cy='tea-info'>
