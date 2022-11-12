@@ -1,17 +1,30 @@
 .tea-card {
   box-sizing: border-box;
-  border: 3px solid black;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 210px;
+  height: auto;
 }
 
-/* .card-title {
-
+.card-title {
+  margin: -15px;
 }
 
-.card-p {
-
+.card-p,
+.card-title {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .card-img {
-
-} */
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+  
+} 

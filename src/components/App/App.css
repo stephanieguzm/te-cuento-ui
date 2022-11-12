@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid red
-}
+} */
 
 .App {
   text-align: center;
@@ -37,6 +37,12 @@ nav {
 
 a:link {
   text-decoration: none;
+}
+
+main {
+  margin-left: calc(14vh - 10px);
+  margin-right: calc(14vh - 10px);
+  /* background-color: red; */
 }
 
 footer {
@@ -76,4 +82,15 @@ footer {
   0% { transform: rotate(0deg) scale(1); }
   50% { transform: rotate(720deg) scale(0.6); -webkit-filter: blur(3px); }
   100% { transform: rotate(0deg) scale(1); }
+}
+
+
+    /* add margin for main body
+     */
+
+.comments-container,
+.tea-container {
+  margin-left: calc(1vh - 10px);
+  margin-right: calc(1vh - 10px);
+  /* background-color: blue; */
 }
