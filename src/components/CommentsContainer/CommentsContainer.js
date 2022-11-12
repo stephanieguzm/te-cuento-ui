@@ -4,6 +4,8 @@ import CommentSection from '../CommentSection/CommentSection'
 import Error from '../Error/Error'
 import { getComments } from '../../apiCalls'
 
+import './CommentsContainer.css'
+
 class CommentsContainer extends Component {
   constructor() {
     super()

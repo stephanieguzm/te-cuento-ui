@@ -1,17 +1,38 @@
 .tea-card {
   box-sizing: border-box;
-  border: 3px solid black;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 75%;
+  height: auto;
 }
 
-/* .card-title {
-
+/* trying to render hover
+div.tea-card:hover a {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 
-.card-p {
+div.tea-card:hover a {
+  color: #1ec279;
+} */
 
+.card-title {
+  margin: -15px;
+}
+
+.card-p,
+.card-title {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .card-img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
 
-} */
+} 
