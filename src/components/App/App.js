@@ -19,6 +19,7 @@ class App extends Component {
     }
   }
 
+  //reset state
   returnHome = () => {
     this.setState({ teas: [], error: ''})
   }
@@ -35,35 +36,35 @@ class App extends Component {
         <Header />
         <main className='App'>
           <div className='components-container'>
-            {this.state.teas.length 
-            ? <Switch>
-              <Route 
-                exact path='/' 
-                render={() => {
-                  return <TeaContainer 
-                  teas={this.state.teas} 
-                  returnHome={this.returnHome} />
-                }}
-                />
-              <Route 
-                exact path='/:id'
-                render={({ match }) => {
-                  const teaId = match.params.id
-                  return <TeaPage 
-                  teas={this.state.teas} 
-                  selectedTea={parseInt(teaId)} 
-                  returnHome={this.returnHome}
-                  errorMessage={this.state.error} />
-                }}
-                />
-              <Route path='*' render={() => {
-                <Error errorMessage='What the heck are you doing here?' /> }} />
-            </Switch>
-            : <Error 
-              errorMessage={this.state.error} 
-              returnHome={this.returnHome} />
-          }
             {!this.state.teas.length && !this.state.error && <p className='spinner' data-cy='spinner'></p>}
+            {this.state.error && <Error errorMessage={this.state.error} />}
+            {this.state.teas.length && 
+              <Switch>
+                <Route 
+                  exact path='/' 
+                  render={() => {
+                    return <TeaContainer 
+                    teas={this.state.teas} 
+                    returnHome={this.returnHome} />
+                  }}
+                />
+                <Route 
+                  exact path='/:id'
+                  render={({ match }) => {
+                    const teaId = match.params.id
+                    //if chosen tea exists, return teaPage, otherwise render error. secures the tea page
+                    return <TeaPage 
+                    teas={this.state.teas} 
+                    selectedTea={parseInt(teaId)} 
+                    returnHome={this.returnHome}
+                    errorMessage={this.state.error} />
+                  }}
+                />
+                <Route path='*' render={() => {
+                  <Error errorMessage='What the heck are you doing here?' /> }} 
+                />
+              </Switch>
+            }
           </div>
         </main>
         <Footer />
