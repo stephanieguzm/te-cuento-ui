@@ -1,0 +1,14 @@
+[
+  {
+    "id": 10,
+    "tea_id": 3,
+    "user_name": "Jorge",
+    "user_message": "Oh man, this is amazing. This may very well be my new favorite. It is exquisite, like drinking the essence of spring. At 3 minutes, there is absolutely no bitterness (I think I prefer 2 minutes, it is a perfect, delicate, pale green elixir). I was afraid to try it because I don't like smoky flavored tea at all. But I am getting zero smoke flavor. It's nutty, buttery, green, and fabulous!"
+  },
+  {
+    "id": 11,
+    "tea_id": 3,
+    "user_name": "Gina",
+    "user_message": "A delightful light tea, perfect for our afternoon tea break. Pale yellow/gold in the cup, with no grassiness. A very light toasty smoky fruity treat. It is going on our reorder list for sure. No bitterness whatsoever."
+  }
+]
