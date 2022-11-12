@@ -43,7 +43,6 @@ a:link {
 main {
   margin-left: calc(14vh - 10px);
   margin-right: calc(14vh - 10px);
-  /* background-color: red; */
 }
 
 footer {
@@ -85,13 +84,15 @@ footer {
   100% { transform: rotate(0deg) scale(1); }
 }
 
-
-    /* add margin for main body
-     */
-
 .comments-container,
 .tea-container {
   margin-left: calc(1vh - 10px);
   margin-right: calc(1vh - 10px);
-  /* background-color: blue; */
 }
+
+
+/* h1, 
+h2, 
+h3 {
+
+} */

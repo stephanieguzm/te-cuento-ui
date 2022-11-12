@@ -7,12 +7,12 @@
 
 .tea-header-details {
   text-align: left;
-  margin-left: 32px;
+  margin: 32px;
   width: 100%;
 }
 
 .tea-pg-img {
-  width: 60%;
+  width: 65%;
   height: auto;
   /* display: flex;
   flex-direction: row;
@@ -23,6 +23,7 @@
 .farmer-img {
   width: 100%;
   height: auto;
+  border-radius: 4px;
   /* display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -34,6 +35,3 @@
   padding: calc(2vh - 10px);
   margin-right: 32px;
 }
-
-
-/* img breakpoint: 950px, then must scale down for smaller screen*/

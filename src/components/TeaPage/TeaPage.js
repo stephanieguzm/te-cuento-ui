@@ -28,7 +28,7 @@ const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
           </section>
           <section className='desc-farmer'>
             <div className='about'>
-              <h3>About</h3>
+              <h3>About {tea.name}</h3>
               <p className='tea-p' data-cy='tea-desc'>{tea.description}</p>
             </div>
             <div className='farmer-container' data-cy='farmer-container'>

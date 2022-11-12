@@ -1,4 +1,5 @@
 import Comment from '../Comment/Comment'
+import './CommentSection.css'
 
 const CommentSection = ({ teaComments }) => {
   const commentCards = teaComments.map( comment => {
@@ -11,6 +12,7 @@ const CommentSection = ({ teaComments }) => {
   }) 
   return (
     <section className='comments-section' data-cy='comments-section'>
+      <h2 className='comments-title'>Comments</h2>
       {commentCards}
     </section>
   )
