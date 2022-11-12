@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid red
-}
+} */
 
 .App {
   text-align: center;
@@ -101,5 +101,16 @@ color: rgba(0, 0, 0, 0.8);
 p {
   font-family: 'Open Sans', sans-serif;
   color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 30em) {
+  body {
+    background: teal;
+  }
+
+  .tea-container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 

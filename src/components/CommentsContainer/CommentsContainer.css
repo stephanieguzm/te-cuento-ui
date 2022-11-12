@@ -10,6 +10,8 @@ textarea {
   background-color: #f8f8f8;
   resize: none;
   margin: calc(2vh - 10px);
+  font-family: 'Open Sans', sans-serif;
+  width: 50vw;
 }
 
 input:focus,
@@ -18,16 +20,11 @@ textarea:focus {
 }
 
 input[type=text] {
-  width: 50vw;
   height: 4vh;
-  font-family: 'Open Sans', sans-serif;
 }
 
 textarea {
-  width: 50vw;
   height: 10vh;
-  word-break: break-all;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .error-message,
@@ -82,4 +79,35 @@ textarea {
 .comment-name {
   color: #473658;
   font-weight: 700;
+}
+
+@media screen and (max-width: 45em) {
+  input[type=text],
+  textarea {
+    margin-bottom: 8px;
+  }
+
+  input[type=text] {
+    height: 6vh;
+  }
+
+  textarea {
+    height: 15vh;
+  }
+
+  .form-button {
+    width: 22vw;
+    height: 5vh;
+  }
+
+  .title,
+  .comments-title {
+    text-align: center;
+  }
+
+  .comment-name,
+  .comment-message {
+    align-content: center;
+    margin: 0;
+  }
 }
