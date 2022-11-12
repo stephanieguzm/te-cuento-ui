@@ -16,12 +16,12 @@ const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
             <div className='tea-header-details'>
               <p className='tea-p' data-cy='tea-type'>{tea.type} tea</p>
               <h2 className='tea-p' data-cy='tea-name'>{tea.name}</h2>
-              <p className='tea-p' data-cy='tea-origin'>Origin: {tea.origin}</p>
+              <h4 className='tea-p' data-cy='tea-origin'>{tea.origin} origin</h4>
               <p className='tea-p' data-cy='tea-brew'>
-                Steep for {tea.brew_time} minutes at {tea.temperature}°F 
+                steep for {tea.brew_time} minutes at {tea.temperature}°F 
               </p>
-              <p className='tea-p'>This tea contains a {tea.caffeine_level} level of caffeine</p>
-              <p className='tea-p' data-cy='tea-infusions'>Infusions: {tea.infusions}</p>
+              <p className='tea-p'>{tea.caffeine_level} caffeine level</p>
+              <p className='tea-p' data-cy='tea-infusions'>{tea.infusions} infusions</p>
               <p className='tea-p' data-cy='tea-caffeine'>
               </p>
             </div>
