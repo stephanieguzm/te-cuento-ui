@@ -12,7 +12,9 @@ const TeaPage = ({ teas, selectedTea, returnHome, errorMessage }) => {
       ? <Error errorMessage={errorMessage} returnHome={returnHome} />
       : <section className='tea-page-container' data-cy='tea-page-container'>
           <section className='tea-header' id={tea.id} data-cy='tea-header'>
-            <img className='tea-pg-img' src={tea.img} alt={`${tea.name} tea`} data-cy='tea-img'/>
+            <div className='img-container'>
+              <img className='tea-pg-img' src={tea.img} alt={`${tea.name} tea`} data-cy='tea-img'/>
+            </div>
             <div className='tea-header-details'>
               <p className='tea-p' data-cy='tea-type'>{tea.type} tea</p>
               <h2 className='tea-p' data-cy='tea-name'>{tea.name}</h2>

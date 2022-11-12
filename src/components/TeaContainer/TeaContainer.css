@@ -4,3 +4,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
+
+@media screen and (max-width: 45em) {
+  .tea-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

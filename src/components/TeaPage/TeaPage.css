@@ -12,7 +12,7 @@
 }
 
 .tea-pg-img {
-  width: 65%;
+  width: 100%;
   height: auto;
   /* display: flex;
   flex-direction: row;
@@ -30,8 +30,13 @@
   align-self: stretch; */
 }
 
+.img-container {
+  width: 140%;
+}
+
 .about {
   width: 80%;
   padding: calc(2vh - 10px);
   margin-right: 32px;
 }
+
