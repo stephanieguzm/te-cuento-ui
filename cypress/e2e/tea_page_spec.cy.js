@@ -43,7 +43,7 @@ describe('As a user, I should be able to visit a single tea page', () => {
     cy
       .get('[data-cy="tea-card"]').first().click()  
     // .visit('/3')
-      .get('[data-cy="tea-info"]')
+      .get('[data-cy="tea-header"]')
       .get('[data-cy="tea-name"]').contains('Yun Wu')
       .get('[data-cy="tea-type"]').contains('green tea')
       .get('[data-cy="tea-origin"]').contains('Origin: Zhejiang, China')
@@ -61,7 +61,7 @@ describe('As a user, I should be able to visit a single tea page', () => {
   it.skip('should display the details about another selected tea', () => {
     cy
       .get('[data-cy="tea-card"]').last().click()  
-      .get('[data-cy="tea-info"]')
+      .get('[data-cy="tea-header"]')
       .get('[data-cy="tea-name"]').contains('Traditional Yi Kuan Yin')
       .get('[data-cy="tea-origin"]').contains('Origin: Fujian, China')
       .get('[data-cy="tea-infusions"]').contains('Infusions: 3')

@@ -32,7 +32,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='parent-container'>
         <Header />
         <main className='App'>
           <div className='components-container'>
