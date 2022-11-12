@@ -11,23 +11,14 @@
   width: 100%;
 }
 
-.tea-pg-img {
-  width: 100%;
-  height: auto;
-  /* display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  align-self: stretch; */
-}
-
+.tea-pg-img, 
 .farmer-img {
   width: 100%;
   height: auto;
+}
+
+.farmer-img {
   border-radius: 4px;
-  /* display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  align-self: stretch; */
 }
 
 .img-container {
@@ -40,7 +31,7 @@
   margin-right: 32px;
 }
 
-@media screen and (max-width: 45em) {
+@media screen and (max-width: 900px) {
   .tea-header,
   .desc-farmer {
       display: flex;

@@ -52,7 +52,7 @@ class CommentForm extends Component {
   render() {
     return (
       <>
-        <h2 className='title' data-cy='comments-title'>Share Your Thoughts and Stories with Us</h2>
+        <h2 className='title' data-cy='comments-title'>Share Your Thoughts with Us</h2>
         <form className='comment-form' data-cy='comment-form'>
           <input 
             type='text'
