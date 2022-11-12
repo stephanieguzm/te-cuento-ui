@@ -1,8 +1,39 @@
-/* .tea-page-container {}
+.tea-header,
+.desc-farmer {
+  display: flex;
+  justify-content: row;
+  margin-bottom: calc(4vh - 10px);
+}
 
-.tea-p {}
+.tea-header-details {
+  text-align: left;
+  margin-left: 32px;
+  width: 100%;
+}
 
-.tea-img {}
+.tea-pg-img {
+  width: 60%;
+  height: auto;
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: stretch; */
+}
 
-.comments-container {} */
+.farmer-img {
+  width: 100%;
+  height: auto;
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-self: stretch; */
+}
 
+.about {
+  width: 80%;
+  padding: calc(2vh - 10px);
+  margin-right: 32px;
+}
+
+
+/* img breakpoint: 950px, then must scale down for smaller screen*/

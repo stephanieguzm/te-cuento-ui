@@ -4,9 +4,19 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  width: 210px;
+  width: 75%;
   height: auto;
 }
+
+/* trying to render hover
+div.tea-card:hover a {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+div.tea-card:hover a {
+  color: #1ec279;
+} */
 
 .card-title {
   margin: -15px;
@@ -24,7 +34,5 @@
   flex-direction: row;
   align-items: flex-start;
   align-self: stretch;
-  width: 100%;
-  height: auto;
-  
+
 } 
