@@ -19,11 +19,6 @@ class App extends Component {
     }
   }
 
-  //reset state
-  returnHome = () => {
-    this.setState({ teas: [], error: ''})
-  }
-
   componentDidMount = () => {
     getTeas()
       .then(data => this.setState({ teas: data }))
@@ -44,25 +39,19 @@ class App extends Component {
                   exact path='/' 
                   render={() => {
                     return <TeaContainer 
-                    teas={this.state.teas} 
-                    returnHome={this.returnHome} />
-                  }}
-                />
+                    teas={this.state.teas} />
+                  }}/>
                 <Route 
                   exact path='/:id'
                   render={({ match }) => {
-                    const teaId = match.params.id
-                    //if chosen tea exists, return teaPage, otherwise render error. secures the tea page
+                    const teaId = parseInt(match.params.id)
+                    const tea = this.state.teas.find(tea => tea.id === teaId)
                     return <TeaPage 
-                    teas={this.state.teas} 
-                    selectedTea={parseInt(teaId)} 
-                    returnHome={this.returnHome}
-                    errorMessage={this.state.error} />
-                  }}
-                />
+                    tea={tea}
+                    teaId={teaId} />
+                  }}/>
                 <Route path='*' render={() => {
-                  <Error errorMessage='What the heck are you doing here?' /> }} 
-                />
+                  <h3>'What the heck are you doing here?'</h3> }} />
               </Switch>
             }
           </div>
