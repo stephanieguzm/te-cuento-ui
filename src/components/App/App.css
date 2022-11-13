@@ -1,6 +1,3 @@
-/* * {
-  border: 1px solid red
-} */
 html {
   overflow-x: hidden;
 }
@@ -32,13 +29,6 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-}
-
-.nav-button {
-  padding: 0 10px;
-  margin: 0 40px 0 16px;
-  font-size: .8em;
-  cursor: pointer;
 }
 
 a:link {
@@ -73,7 +63,8 @@ h4 {
   color: rgba(0, 0, 0, 0.8);
 }
 
-p {
+p,
+.links {
   font-family: 'Open Sans', sans-serif;
   color: rgba(0, 0, 0, 0.7);
 }
@@ -81,7 +72,7 @@ p {
 .spinner {
   margin: auto;
   display: block;
-  border: 25px solid rgb(0, 0, 0);
+  border: 25px solid #473658;
   width: 1px;
   height: 1px;
   border-radius: 50px;
@@ -104,6 +95,49 @@ p {
 
 .logo {
   cursor: pointer;
+  max-width: 13em;
+  height: auto;
+}
+
+.nav-button {
+  padding: 0 10px;
+  margin: 0 40px 0 16px;
+  font-size: .8em;
+  cursor: pointer;
+}
+
+.home-button {
+  width: 14vw;
+  height: 4vh;
+  margin: 1vh;
+  margin-bottom: 3vh;
+  color: white;
+  cursor: pointer;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #775995;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  transition: all 0.2s;
+  border: none;
+  align-self: center;
+}
+
+.pg-not-found-container {
+  margin-top: calc(8vh - 10px);
+  margin-bottom: calc(8vh - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.links {
+  padding: 15px;
+  font-size: 1.1em;
+}
+
+button:hover {
+  background-color: #473658;
+  font-size: 1.2em;
 }
 
 @media screen and (max-width: 600px) {
