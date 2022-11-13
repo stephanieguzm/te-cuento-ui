@@ -5,6 +5,7 @@ import Header from '../Header/Header'
 import TeaContainer from '../TeaContainer/TeaContainer'
 import TeaPage from '../TeaPage/TeaPage'
 import Footer from '../Footer/Footer'
+import PageNotFound from '../PageNotFound/PageNotFound'
 
 import { getTeas } from '../../apiCalls.js'
 
@@ -27,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className='parent-container'>
+      <>
         <Header />
         <main className='App'>
           <div className='components-container'>
@@ -46,18 +47,15 @@ class App extends Component {
                   render={({ match }) => {
                     const teaId = parseInt(match.params.id)
                     const tea = this.state.teas.find(tea => tea.id === teaId)
-                    return <TeaPage 
-                    tea={tea}
-                    teaId={teaId} />
+                    return <TeaPage tea={tea} teaId={teaId} />
                   }}/>
-                <Route path='*' render={() => {
-                  <h3>'What the heck are you doing here?'</h3> }} />
+                <Route path='*' render={() => <PageNotFound />} />
               </Switch>
             }
           </div>
         </main>
         <Footer />
-      </div>
+      </>
     )
   }
 

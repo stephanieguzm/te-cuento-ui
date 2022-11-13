@@ -1,8 +1,12 @@
+// import { useHistory } from 'react-router-dom'
 import CommentsContainer from '../CommentsContainer/CommentsContainer'
 
 import './TeaPage.css'
 
 const TeaPage = ({ tea, teaId }) => {
+  // const history = useHistory()
+
+  // {!tea && history.replace('*')}
 
   return (
     <section className='tea-page-container' data-cy='tea-page-container'>
@@ -39,7 +43,6 @@ const TeaPage = ({ tea, teaId }) => {
           />
       </section>
     </section>
-  )
-}
+  )}
 
-export default TeaPage;
+export default TeaPage

@@ -2,8 +2,6 @@ import { Component } from 'react'
 import { postComment } from '../../apiCalls'
 import uniqueRandom from 'unique-random';
 
-import './CommentForm.css';
-
 const random = uniqueRandom(35, 5000);
 
 class CommentForm extends Component {
@@ -83,4 +81,4 @@ class CommentForm extends Component {
 
 }
 
-export default CommentForm;
+export default CommentForm

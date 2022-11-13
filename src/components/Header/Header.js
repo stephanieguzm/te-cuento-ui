@@ -1,8 +1,6 @@
 import { useHistory } from "react-router-dom"
 import logo from '../../logo.svg'
 
-import './Header.css'
-
 const Header = () => {
   const history = useHistory()
 
