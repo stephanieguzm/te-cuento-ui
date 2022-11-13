@@ -56,19 +56,6 @@ const TeaPage = ({ teas, teaId }) => {
 export default TeaPage
 
 TeaPage.propTypes = {
-  tea: PropTypes.shape({
-    brew_time: PropTypes.string,
-    caffeine_level: PropTypes.string,
-    description: PropTypes.string,
-    farmer: PropTypes.string,
-    farmer_img: PropTypes.string,
-    id: PropTypes.number,
-    img: PropTypes.string,
-    infusions: PropTypes.number,
-    name: PropTypes.string,
-    origin: PropTypes.string,
-    temperature: PropTypes.number,
-    type: PropTypes.string
-  }),
+  teas: PropTypes.arrayOf(PropTypes.object),
   teaId: PropTypes.number.isRequired
 }
