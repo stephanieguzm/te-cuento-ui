@@ -6,6 +6,7 @@ import TeaContainer from '../TeaContainer/TeaContainer'
 import TeaPage from '../TeaPage/TeaPage'
 import Footer from '../Footer/Footer'
 import PageNotFound from '../PageNotFound/PageNotFound'
+import hero from '../../hero.png'
 
 import { getTeas } from '../../apiCalls.js'
 
@@ -34,7 +35,6 @@ class App extends Component {
       </section>
     )
   }
-
 
   render() {
     return (

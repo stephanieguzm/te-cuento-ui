@@ -3,6 +3,11 @@
   display: flex;
   justify-content: row;
   margin-bottom: calc(8vh - 10px);
+  text-align: center;
+}
+
+.tea-page-container {
+  text-align: left;
 }
 
 .tea-header-details {
@@ -29,6 +34,7 @@
   width: 80%;
   padding: calc(2vh - 10px);
   margin-right: 32px;
+  text-align: left;
 }
 
 @media screen and (max-width: 900px) {

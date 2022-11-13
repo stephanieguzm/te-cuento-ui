@@ -10,7 +10,6 @@ const TeaPage = ({ tea, teaId }) => {
 
   return (
     <section className='tea-page-container' data-cy='tea-page-container'>
-      <h1>It works!</h1>
       <section className='tea-header' id={tea.id} data-cy='tea-header'>
         <div className='img-container'>
           <img className='tea-pg-img' src={tea.img} alt={`${tea.name} tea`} data-cy='tea-img'/>

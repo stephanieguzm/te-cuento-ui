@@ -16,3 +16,44 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.flex-hero {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  align-items: stretch;
+  /* width: 100%; */
+  /* height: auto; */
+  margin: 0 -120px 0 -120px;
+  object-fit: scale-down;
+
+}
+
+/* .comments-container,
+.tea-container {
+  margin-left: calc(1vh + 10px);
+  margin-right: calc(1vh + 10px);
+} */
+
+.hero-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
