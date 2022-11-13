@@ -1,15 +1,16 @@
 // import { useHistory } from 'react-router-dom'
+// import { Component } from 'react'
+// import { getTea } from '../../apiCalls'
 import CommentsContainer from '../CommentsContainer/CommentsContainer'
 
 import './TeaPage.css'
 
 const TeaPage = ({ tea, teaId }) => {
-  // const history = useHistory()
-
-  // {!tea && history.replace('*')}
+// const history = useHistory()
 
   return (
     <section className='tea-page-container' data-cy='tea-page-container'>
+      <h1>It works!</h1>
       <section className='tea-header' id={tea.id} data-cy='tea-header'>
         <div className='img-container'>
           <img className='tea-pg-img' src={tea.img} alt={`${tea.name} tea`} data-cy='tea-img'/>
@@ -43,6 +44,8 @@ const TeaPage = ({ tea, teaId }) => {
           />
       </section>
     </section>
-  )}
+  )
+
+}
 
 export default TeaPage

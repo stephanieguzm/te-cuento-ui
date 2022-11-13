@@ -4,16 +4,20 @@ import logo from '../../logo.svg'
 const Header = () => {
   const history = useHistory()
 
-  const goHome = () => {
+  const toHome = () => {
     history.push('/')
+  }
+
+  const toAbout = () => {
+    history.push('/about')
   }
   
   return (
     <header className="header-container" data-cy='header-container'>
-      <img src={logo} data-cy ='logo' alt='coffee cup logo' onClick={goHome}/>
+      <img className='logo' src={logo} data-cy ='logo' alt='coffee cup logo' onClick={toHome}/>
       <nav className='nav-bar' data-cy='nav-bar'>
-        <p className='nav-button' data-cy='about-button' onClick={goHome}>ABOUT</p>
-        <p className='nav-button' data-cy='home-button' onClick={goHome}>TEAS</p>
+        <p className='nav-button' data-cy='about-button' onClick={toAbout}>ABOUT</p>
+        <p className='nav-button' data-cy='home-button' onClick={toHome}>TEAS</p>
       </nav>
     </header>
   )

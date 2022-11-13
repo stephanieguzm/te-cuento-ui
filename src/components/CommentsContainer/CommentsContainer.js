@@ -1,7 +1,6 @@
 import { Component } from "react"
 import CommentForm from '../CommentForm/CommentForm'
 import CommentSection from '../CommentSection/CommentSection'
-import Error from '../Error/Error'
 import { getComments } from '../../apiCalls'
 
 import './CommentsContainer.css'
