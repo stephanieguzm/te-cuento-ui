@@ -5,7 +5,7 @@ import Error from '../Error/Error'
 
 import './CommentForm.css';
 
-const random = uniqueRandom(35, 1000);
+const random = uniqueRandom(35, 2000);
 
 class CommentForm extends Component {
   constructor() {
@@ -72,7 +72,7 @@ class CommentForm extends Component {
             onChange={(event) => this.handleChange(event)}
             required
           />
-          <button className='form-button' data-cy='form-button' onClick={(event) => this.handleSubmit(event)}>Submit</button>
+          <button className='form-button' data-cy='form-button' onClick={(event) => this.handleSubmit(event)}>SUBMIT</button>
         </form>
         {this.state.error && <h3 className='error-message' data-cy='error-message'>{this.state.error}</h3>}        
       </>
