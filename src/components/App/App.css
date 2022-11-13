@@ -20,6 +20,7 @@ header {
   font-size: calc(8px + 2vmin);
   padding: 0px 25px 0px 25px;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  clip-path: inset(-5px 0px -5px -5px);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -64,6 +65,19 @@ footer {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Domine', serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .spinner {
   margin: auto;
   display: block;
@@ -88,20 +102,15 @@ footer {
   margin-right: calc(1vh - 10px);
 }
 
-h1, 
-h2, 
-h3,
-h4 {
-font-family: 'Domine', serif;
-color: rgba(0, 0, 0, 0.8);
-}
-
-p {
-  font-family: 'Open Sans', sans-serif;
-  color: rgba(0, 0, 0, 0.7);
-}
-
 .logo {
   cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+  .nav-button {
+    padding: 0 5px;
+    margin: 0 2px 0 4px;
+    font-size: .8em;
+    cursor: pointer;
+  }
+}

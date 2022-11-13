@@ -63,6 +63,8 @@ textarea {
 .comments-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 .comment-name,
@@ -107,7 +109,7 @@ textarea {
 
   .comment-name,
   .comment-message {
-    align-content: center;
     margin: 0;
+    text-align: left;
   }
 }

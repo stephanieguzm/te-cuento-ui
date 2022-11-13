@@ -4,6 +4,8 @@
 import PropTypes from 'prop-types'
 import CommentsContainer from '../CommentsContainer/CommentsContainer'
 
+import './TeaPage.css'
+
 const TeaPage = ({ tea, teaId }) => {
 // const history = useHistory()
 

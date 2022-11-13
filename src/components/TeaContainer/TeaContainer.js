@@ -19,10 +19,8 @@ const TeaContainer = ({ teas }) => {
     <div>
       <div className='flex-hero'>
         <img className='hero-img' src={hero} />
-        <div className='hero-text'>
-          <p>Every cup has a story</p>
-        </div>
       </div>
+      <p className='hero-p'>Every cup has a story to share.</p>
       <section className='tea-container' data-cy='tea-container'>
         {teaCards}
       </section>

@@ -16,8 +16,8 @@ const Header = () => {
     <header className="header-container" data-cy='header-container'>
       <img className='logo' src={logo} data-cy ='logo' alt='coffee cup logo' onClick={toHome}/>
       <nav className='nav-bar' data-cy='nav-bar'>
-        <p className='nav-button' data-cy='about-button' onClick={toAbout}>ABOUT</p>
         <p className='nav-button' data-cy='home-button' onClick={toHome}>TEAS</p>
+        <p className='nav-button' data-cy='about-button' onClick={toAbout}>ABOUT</p>
       </nav>
     </header>
   )

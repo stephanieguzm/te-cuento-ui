@@ -1,0 +1,56 @@
+.tea-header,
+.desc-farmer {
+  display: flex;
+  justify-content: row;
+  margin-bottom: calc(8vh - 10px);
+}
+
+.tea-header-details {
+  text-align: left;
+  margin: 32px;
+  width: 100%;
+}
+
+.tea-pg-img,
+.farmer-img {
+  width: 100%;
+  height: auto;
+}
+
+.farmer-img {
+  border-radius: 4px;
+}
+
+.img-container {
+  width: 140%;
+}
+
+.about {
+  width: 80%;
+  padding: calc(2vh - 10px);
+  margin-right: 32px;
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+
+  .tea-header,
+  .desc-farmer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .img-container {
+    width: 100%;
+  }
+
+  .tea-header-details {
+    text-align: center;
+    margin: 0;
+  }
+
+  .about {
+    width: 100%;
+  }
+}
