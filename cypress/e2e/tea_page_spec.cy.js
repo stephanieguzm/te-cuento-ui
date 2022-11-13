@@ -6,7 +6,7 @@ describe('As a user, I should be able to visit a single tea page', () => {
     cy.wait('@teas')
   })
 
-  it.skip('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
+  it('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
     cy.intercept(
       'GET',
       'http://localhost:9000/api/v1/teas',
@@ -23,13 +23,13 @@ describe('As a user, I should be able to visit a single tea page', () => {
       .get('[data-cy="home-button"]'). contains('Home')
   });
 
-  it.skip('should allow the user to click on a single tea and be taken to the single tea page view', () => {
+  it('should allow the user to click on a single tea and be taken to the single tea page view', () => {
     cy
       .get('[data-cy="tea-card"]').first().click()
       .url().should('eq', 'http://localhost:3000/3')
   })
 
-  it.skip('should persist the header and footer when viewing a single tea', () => {
+  it('should persist the header and footer when viewing a single tea', () => {
     cy
       .visit('/3')
       .get('[data-cy="header-container"]')
@@ -39,7 +39,7 @@ describe('As a user, I should be able to visit a single tea page', () => {
       .get('[data-cy="footer-container"]')
   })
 
-  it.skip('should display the details about the selected tea', () => {
+  it('should display the details about the selected tea', () => {
     cy
       .get('[data-cy="tea-card"]').first().click()  
     // .visit('/3')
@@ -58,7 +58,7 @@ describe('As a user, I should be able to visit a single tea page', () => {
 
   })
 
-  it.skip('should display the details about another selected tea', () => {
+  it('should display the details about another selected tea', () => {
     cy
       .get('[data-cy="tea-card"]').last().click()  
       .get('[data-cy="tea-header"]')

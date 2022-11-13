@@ -3,8 +3,6 @@
 // import { getTea } from '../../apiCalls'
 import CommentsContainer from '../CommentsContainer/CommentsContainer'
 
-import './TeaPage.css'
-
 const TeaPage = ({ tea, teaId }) => {
 // const history = useHistory()
 
@@ -38,9 +36,7 @@ const TeaPage = ({ tea, teaId }) => {
         </div>
       </section>
       <section className='comments-container' data-cy='comments-container'>
-        <CommentsContainer 
-          tea_id={teaId}
-          />
+        <CommentsContainer tea_id={teaId} />
       </section>
     </section>
   )

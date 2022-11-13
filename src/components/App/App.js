@@ -6,8 +6,6 @@ import TeaContainer from '../TeaContainer/TeaContainer'
 import TeaPage from '../TeaPage/TeaPage'
 import Footer from '../Footer/Footer'
 import PageNotFound from '../PageNotFound/PageNotFound'
-import hero from '../../hero.png'
-
 import { getTeas } from '../../apiCalls.js'
 
 import './App.css';
@@ -42,7 +40,7 @@ class App extends Component {
         <Header />
         <main className='App'>
           <div className='components-container'>
-            {!this.state.teas.length && !this.state.error && <p className='spinner' data-cy='spinner'></p>}
+            {!this.state.teas && !this.state.error && <p className='spinner' data-cy='spinner'></p>}
             {this.state.error && <Error errorMessage={this.state.error} />}
             {this.state.teas.length && 
               <Switch>

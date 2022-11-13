@@ -65,7 +65,7 @@ describe('As a user, when I visit the application, I will see the header, a list
       .get('[data-cy="farmer-container"]').should('not.exist')
   })
 
-    it('Should be able to use the browser arrow buttons to go between the home page and individual tea page', () => {
+  it('Should be able to use the browser arrow buttons to go between the home page and individual tea page', () => {
     cy
       .get('[data-cy="tea-card"]').first().click()
       .visit('/3')

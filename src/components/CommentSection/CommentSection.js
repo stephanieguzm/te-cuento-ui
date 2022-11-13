@@ -1,5 +1,4 @@
 import Comment from '../Comment/Comment'
-import './CommentSection.css'
 
 const CommentSection = ({ teaComments }) => {
   const commentCards = teaComments.map( comment => {
