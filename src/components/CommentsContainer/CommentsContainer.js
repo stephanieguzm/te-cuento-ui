@@ -1,7 +1,7 @@
 import { Component } from "react"
+import PropTypes from 'prop-types'
 import CommentForm from '../CommentForm/CommentForm'
 import CommentSection from '../CommentSection/CommentSection'
-import Error from '../Error/Error'
 import { getComments } from '../../apiCalls'
 
 import './CommentsContainer.css'
@@ -22,7 +22,7 @@ class CommentsContainer extends Component {
         this.setState({ teaComments: filteredComments })
       })
       .catch(error => 
-        this.setState({ error: "It looks like there was a problem loading our comments but please feel free to submit your own!" }))
+        this.setState({ error: "It looks like there was a problem loading our comments but please add your own." }))
   }
 
   getUpdatedComments = (newComment) => {
@@ -36,18 +36,18 @@ class CommentsContainer extends Component {
         <div className='comments-container' data-cy='comments-container'>
           <CommentForm 
             tea_id={this.props.tea_id} 
-            getUpdatedComments={this.getUpdatedComments}
-            />
+            getUpdatedComments={this.getUpdatedComments}/>
           <CommentSection 
-            teaComments={this.state.teaComments}
-            returnHome={this.props.returnHome}
-            />
+            teaComments={this.state.teaComments}/>
         </div>
         {this.state.error && <h3 className='error' data-cy='error'>{this.state.error}</h3>}  
-        {/* } */}
       </>
     )
   }
 }
 
 export default CommentsContainer
+
+CommentsContainer.propTypes = {
+  tea_id: PropTypes.number.isRequired
+}

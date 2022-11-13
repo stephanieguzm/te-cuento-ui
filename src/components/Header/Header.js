@@ -1,18 +1,23 @@
-import { NavLink } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import logo from '../../logo.svg'
 
-import './Header.css'
-
 const Header = () => {
+  const history = useHistory()
+
+  const toHome = () => {
+    history.push('/')
+  }
+
+  const toAbout = () => {
+    history.push('/about')
+  }
+  
   return (
     <header className="header-container" data-cy='header-container'>
-      <NavLink to='/'>
-        <img src={logo} data-cy ='logo' alt='coffee cup logo'/>
-      </NavLink>
+      <img className='logo' src={logo} data-cy ='logo' alt='coffee cup logo' onClick={toHome}/>
       <nav className='nav-bar' data-cy='nav-bar'>
-        <NavLink to='/'>
-          <button className='home-button' data-cy='home-button'>Teas</button>
-        </NavLink>
+        <p className='nav-button' data-cy='home-button' onClick={toHome}>TEAS</p>
+        <p className='nav-button' data-cy='about-button' onClick={toAbout}>ABOUT</p>
       </nav>
     </header>
   )

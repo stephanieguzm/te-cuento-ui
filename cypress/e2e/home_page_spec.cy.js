@@ -20,16 +20,17 @@ describe('As a user, when I visit the application, I will see the header, a list
     cy.visit('/')
     cy
       .get('[data-cy="error-container"]').contains(`We're taking care of a kettle that's boiling over! Please visit us again later.`)
-      .get('[data-cy="home-button"]'). contains('Home')
+      .get('[data-cy="home-button"]'). contains('HOME')
   })
 
   it('should show a user the application header with logo, title, and navigation bar', () => {
     cy
-      // .get('[data-cy="logo"]')
+      .get('[data-cy="logo"]')
       .get('[data-cy="header-container"]')
-      .get('[data-cy="app-title"]').contains('Té Cuento')
+      .get('[data-cy="logo"]')
       .get('[data-cy="nav-bar"]')
-      .get('[data-cy="home-button"]'). contains('Teas')
+      .get('[data-cy="home-button"]'). contains('TEAS')
+      .get('[data-cy="about-button"]'). contains('ABOUT')
       .get('[data-cy="footer-container"]')
   })
 
@@ -38,9 +39,8 @@ describe('As a user, when I visit the application, I will see the header, a list
       .visit('/')
       .get('[data-cy="spinner"]').should('exist')
       .wait('@teas').then(() => {
-    cy
-      .get('[data-cy="spinner"]').should('not.exist')
-    })
+        cy.get('[data-cy="spinner"]').should('not.exist')
+      })
   })
 
   it('should display all tea cards each with an image, title, and tea type', () => {
@@ -65,7 +65,7 @@ describe('As a user, when I visit the application, I will see the header, a list
       .get('[data-cy="farmer-container"]').should('not.exist')
   })
 
-    it('Should be able to use the browser arrow buttons to go between the home page and individual tea page', () => {
+  it('Should be able to use the browser arrow buttons to go between the home page and individual tea page', () => {
     cy
       .get('[data-cy="tea-card"]').first().click()
       .visit('/3')
@@ -77,6 +77,3 @@ describe('As a user, when I visit the application, I will see the header, a list
   }) 
 
 })
-
-
-//  If I scroll over a card, the card will have a transparent grey color indicating I can click on it

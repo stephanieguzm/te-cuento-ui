@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Comment = ({ id, user_name, user_message }) => {
   return (
     <div className='comment-card' data-cy='comment-card' id={id}>
@@ -8,3 +10,9 @@ const Comment = ({ id, user_name, user_message }) => {
 }
 
 export default Comment
+
+Comment.propTypes = {
+  id: PropTypes.number.isRequired,
+  user_name: PropTypes.string.isRequired,
+  user_message: PropTypes.string.isRequired
+}

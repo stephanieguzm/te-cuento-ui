@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types'
 import Comment from '../Comment/Comment'
-import './CommentSection.css'
 
 const CommentSection = ({ teaComments }) => {
   const commentCards = teaComments.map( comment => {
@@ -20,3 +20,6 @@ const CommentSection = ({ teaComments }) => {
 
 export default CommentSection
 
+CommentSection.propTypes = {
+  teaComments: PropTypes.arrayOf(PropTypes.object).isRequired
+}
