@@ -40,7 +40,7 @@ class App extends Component {
         <Header />
         <main className='App'>
           <div className='components-container'>
-            {!this.state.teas && !this.state.error && <p className='spinner' data-cy='spinner'></p>}
+            {!this.state.teas.length && !this.state.error && <p className='spinner' data-cy='spinner'></p>}
             {this.state.error && <Error errorMessage={this.state.error} />}
             {this.state.teas.length && 
               <Switch>
