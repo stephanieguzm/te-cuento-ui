@@ -56,9 +56,7 @@ class App extends Component {
                 <Route 
                   exact path='/:id'
                   render={({ match }) => {
-                    const teaId = parseInt(match.params.id)
-                    const tea = this.state.teas.find(tea => tea.id === teaId)
-                    return <TeaPage tea={tea} teaId={teaId} />
+                    return <TeaPage teas={this.state.teas} teaId={parseInt(match.params.id)} />
                   }}/>
                 <Route path='*' component={PageNotFound} />
               </Switch>
