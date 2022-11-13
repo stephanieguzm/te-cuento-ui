@@ -1,6 +1,7 @@
 import { Component } from 'react'
-import { postComment } from '../../apiCalls'
+import PropTypes from 'prop-types'
 import uniqueRandom from 'unique-random';
+import { postComment } from '../../apiCalls'
 
 const random = uniqueRandom(35, 5000);
 
@@ -82,3 +83,8 @@ class CommentForm extends Component {
 }
 
 export default CommentForm
+
+CommentForm.propTypes = {
+  getUpdatedComments: PropTypes.func.isRequired,
+  tea_id: PropTypes.number.isRequired
+}

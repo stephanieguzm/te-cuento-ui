@@ -1,6 +1,7 @@
 // import { useHistory } from 'react-router-dom'
 // import { Component } from 'react'
 // import { getTea } from '../../apiCalls'
+import PropTypes from 'prop-types'
 import CommentsContainer from '../CommentsContainer/CommentsContainer'
 
 const TeaPage = ({ tea, teaId }) => {
@@ -44,3 +45,21 @@ const TeaPage = ({ tea, teaId }) => {
 }
 
 export default TeaPage
+
+TeaPage.propTypes = {
+  tea: PropTypes.shape({
+    brew_time: PropTypes.string,
+    caffeine_level: PropTypes.string,
+    description: PropTypes.string,
+    farmer: PropTypes.string,
+    farmer_img: PropTypes.string,
+    id: PropTypes.number,
+    img: PropTypes.string,
+    infusions: PropTypes.number,
+    name: PropTypes.string,
+    origin: PropTypes.string,
+    temperature: PropTypes.number,
+    type: PropTypes.string
+  }),
+  teaId: PropTypes.number.isRequired
+}

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import './TeaCard.css'
 
@@ -15,3 +16,10 @@ const TeaCard = ({ id, name, type, img }) => {
 }
 
 export default TeaCard
+
+TeaCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired
+}

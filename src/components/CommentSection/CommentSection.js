@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Comment from '../Comment/Comment'
 
 const CommentSection = ({ teaComments }) => {
@@ -19,3 +20,6 @@ const CommentSection = ({ teaComments }) => {
 
 export default CommentSection
 
+CommentSection.propTypes = {
+  teaComments: PropTypes.arrayOf(PropTypes.object).isRequired
+}

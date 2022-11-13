@@ -1,4 +1,5 @@
 import { Component } from "react"
+import PropTypes from 'prop-types'
 import CommentForm from '../CommentForm/CommentForm'
 import CommentSection from '../CommentSection/CommentSection'
 import { getComments } from '../../apiCalls'
@@ -46,3 +47,7 @@ class CommentsContainer extends Component {
 }
 
 export default CommentsContainer
+
+CommentsContainer.propTypes = {
+  tea_id: PropTypes.number.isRequired
+}

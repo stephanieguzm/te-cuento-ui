@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types'
 import TeaCard from '../TeaCard/TeaCard'
-import './TeaContainer.css'
 
+import './TeaContainer.css'
 import hero from '../../hero.png'
 
 const TeaContainer = ({ teas }) => {
@@ -30,4 +31,8 @@ const TeaContainer = ({ teas }) => {
 
 }
 
-export default TeaContainer;
+export default TeaContainer
+
+TeaContainer.propTypes = {
+  teas: PropTypes.arrayOf(PropTypes.object)
+}
