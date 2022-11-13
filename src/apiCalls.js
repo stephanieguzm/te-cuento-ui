@@ -1,5 +1,5 @@
 const getTeas = () => {
-  return fetch('http://localhost:9000/api/v1/teas')
+  return fetch('https://te-cuento.herokuapp.com/api/v1/teas')
     .then((resp) => {
     if (!resp.ok) {
       throw new Error(resp.statusCode)
@@ -9,7 +9,7 @@ const getTeas = () => {
 }
 
 const getTea = (id) => {
-  return fetch(`http://localhost:9000/api/v1/teas/${id}`)
+  return fetch(`https://te-cuento.herokuapp.com/api/v1/teas/${id}`)
     .then((resp) => {
     if (!resp.ok) {
       throw new Error(resp.statusCode)
@@ -19,7 +19,7 @@ const getTea = (id) => {
 }
 
 const getComments = () => {
-  return fetch('http://localhost:9000/api/v1/comments')
+  return fetch('https://te-cuento.herokuapp.com/api/v1/comments')
     .then((resp) => {
     if (!resp.ok) {
       throw new Error(resp.statusCode)
@@ -29,7 +29,7 @@ const getComments = () => {
 }
 
 const postComment = (newComment) => {
-  return fetch('http://localhost:9000/api/v1/comments', {
+  return fetch('https://te-cuento.herokuapp.com/api/v1/comments', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
