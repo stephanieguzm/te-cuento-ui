@@ -137,7 +137,6 @@ p,
 
 button:hover {
   background-color: #473658;
-  font-size: 1.2em;
 }
 
 @media screen and (max-width: 600px) {
