@@ -1,70 +1,80 @@
-# Te Cuento
+<p align="center">
+<img width='400' alt='Té Cuento logo' src='https://user-images.githubusercontent.com/101955307/201567634-3dcd0b47-93bf-4051-aa8e-0951f170984f.png'>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### [Deployed Project](https://te-cuento-ui.vercel.app/)
 
-## Available Scripts
+## Overview
+Created within a 5-day sprint, Té Cuento is a responsive web application for tea enthusiasts to build community through their love of tea. Imagined as a space where tea meets storytelling, users are invited to explore a limited selection of single-origin Chinese teas and share their insights with the community on a comment board.
 
-In the project directory, you can run:
+### Learning Goals:      
+✔️ Demonstrate mastery of learned technologies: React, React Router, Asynchronous Javascript, End-to-end testing with Cypress<br> 
+✔️ Create user personas and user stories to describe target audience<br>
+✔️ Work within constraints to deliver a product for a niche audience <br>
 
-### `npm start`
+[Link to Project Description](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Personal Learning Goal:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✔️ To enhance my understanding of backend technologies, I built a custom API to deliver and modify the application data:<br>
 
-### `npm test`
+[Repository](https://github.com/stephanieguzm/te-cuento-api) <br>
+API endpoints: [teas](https://te-cuento.herokuapp.com/api/v1/teas) | [comments](https://te-cuento.herokuapp.com/api/v1/comments)<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
+### Home -> Selected Tea -> Form Entry
+![Home Page & Selected Tea](https://user-images.githubusercontent.com/101955307/201581686-b7d22dc5-da5e-4aa0-abd7-d3151d54bb74.gif)
 
-### `npm run build`
+### Selected Tea -> About -> Home -> Page Not Found -> Home
+![Page Not Found](https://user-images.githubusercontent.com/101955307/201581950-9d33bea7-441a-4e35-beca-6b0694c95367.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup
+1. From your terminal, `cd` to a parent directory
+2. Clone down this repository:
+  ```
+  git@github.com:stephanieguzm/te-cuento-ui.git
+  ```
+3. `cd` into `te-cuento-ui` directory and run:
+  ```
+  npm install
+  npm start
+  ```
+4. Enter the following url in your browser: `http://localhost:3000/`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
+![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) 
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) 
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) 
+![Cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e) 
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black) 
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Iterations
+- [ ] Refactor with React Hooks
+- [ ] Add search functionality for users to search for teas by type or region
 
-### `npm run eject`
+## Dev Notes
+### Wins
+- [x] Successful GET + POST requests from custom API
+- [x] Responsive web design created with custom CSS
+- [X] Strengthened understanding of React lifecycle & passing state
+- [X] Cypress testing against live API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Opportunities for growth
+- [x] React Hooks
+- [x] React Router use of history and location objects
+- [ ] Error Handling
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Planning 
+[Component Architecture & Inspiration Board](https://www.figma.com/file/m91MPTU7WKdtHFA4nL01bt/Te-Cuento?node-id=0%3A1&t=kcEQs4eewklWUxZb-1)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Acknowledgments 
+- Michael Harrison
+- Elle Li
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributors:
+Stephanie Guzman<br>
+[Github](https://github.com/stephanieguzm)<br>
+[LinkedIn](https://www.linkedin.com/in/stephanie-guzman-sdsw/)<br>
