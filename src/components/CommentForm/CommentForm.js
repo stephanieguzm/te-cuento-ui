@@ -59,7 +59,6 @@ class CommentForm extends Component {
             data-cy='user_name'
             value={this.state.user_name}
             onChange={(event) => this.handleChange(event)}
-            autoFocus=''
             required
           />
           <textarea 
@@ -69,7 +68,6 @@ class CommentForm extends Component {
             data-cy='user_message'
             value={this.state.user_message}
             onChange={(event) => this.handleChange(event)}
-            autoFocus=''
             required
           />
           <button 
