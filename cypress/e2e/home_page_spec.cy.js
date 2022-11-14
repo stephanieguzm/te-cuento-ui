@@ -1,7 +1,7 @@
 describe('As a user, when I visit the application, I will see the header, a list of select teas, and a footer', () => {
   
   beforeEach( () => {
-    cy.intercept('GET', 'http://localhost:9000/api/v1/teas', { fixture: 'teas.json' }).as('teas')
+    cy.intercept('GET', 'https://te-cuento.herokuapp.com/api/v1/teas', { fixture: 'teas.json' }).as('teas')
     cy.visit('/')
     cy.wait('@teas')
   })
@@ -9,7 +9,7 @@ describe('As a user, when I visit the application, I will see the header, a list
   it('should display an error message (500 status code) if movies are unable to be displayed on the screen', () => {
     cy.intercept(
       'GET',
-      'http://localhost:9000/api/v1/teas',
+      'https://te-cuento.herokuapp.com/api/v1/teas',
       {
         statusCode: 500,
         body: {
