@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <section className='about-site' data-cy='about-site'>
         <h2>Welcome</h2>
-        <p>Té Cuento was founded as a community to combine the enjoyment of a cup of tea with storytelling. 
+        <p>Té Cuento was founded to combine the enjoyment of a cup of tea with storytelling and build community in the space it creates. 
           Each season we offer recommendations for single-origin teas imported directly from the gardens of China, the birthplace of tea. 
           Every tea is carefully selected to meet our standard for quality and to promote the rich, inspirational tradition of tea.</p>
         <p>We invite you to become a part of our community and share your own stories and insights that come with each cup.</p>
