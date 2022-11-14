@@ -139,6 +139,12 @@ button:hover {
   background-color: #473658;
 }
 
+.about-site {
+  text-align: left;
+  margin-top: calc(18vh - 10px);
+  margin-bottom: calc(18vh - 10px);
+}
+
 @media screen and (max-width: 600px) {
   .nav-button {
     padding: 0 5px;

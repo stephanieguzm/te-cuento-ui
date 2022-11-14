@@ -25,6 +25,9 @@ const TeaPage = ({ teas, teaId }) => {
           <p className='tea-p' data-cy='tea-caffeine'>{tea.caffeine_level} caffeine level</p>
           <p className='tea-p' data-cy='tea-infusions'>{tea.infusions} infusions</p>
           <p className='tea-p' data-cy='tea-caffeine'></p>
+          <form>
+            <button className='home-button' formAction="https://www.adagio.com/">BUY</button>
+          </form>
         </div>
       </section>
       <section className='desc-farmer'>
