@@ -41,7 +41,7 @@ describe('As a user, I will be able to read and add a comment about my selected 
 
   it('should display an error message (500 status code) if teas are unable to be displayed on the screen', () => {
     cy
-      .intercept('GET','http://localhost:9000/api/v1/comments', {
+      .intercept('GET','https://te-cuento.herokuapp.com/api/v1/comments', {
         statusCode: 500,
         body: {
           error: 'It looks like there was a problem loading our comments but please feel free to submit your own!',
