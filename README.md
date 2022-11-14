@@ -76,6 +76,7 @@ API endpoints: [teas](https://te-cuento.herokuapp.com/api/v1/teas) | [comments](
 ## Acknowledgments 
 - Michael Harrison
 - Elle Li
+- Logan McCoy
 
 ## Contributors:
 Stephanie Guzman<br>
