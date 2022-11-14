@@ -66,8 +66,8 @@ API endpoints: [teas](https://te-cuento.herokuapp.com/api/v1/teas) | [comments](
 - [X] Cypress testing against live API
 
 ### Opportunities for growth
-- [x] React Hooks
-- [x] React Router use of history and location objects
+- [ ] React Hooks
+- [ ] React Router use of history and location objects
 - [ ] Error Handling
 
 ## Project Planning 
