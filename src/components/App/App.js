@@ -27,9 +27,13 @@ class App extends Component {
 
   aboutSection = () => {
     return (
-      <section className='about' data-cy='about'>
-        <h2>About Té Cuento</h2>
-        <p>Té Cuento is a place for tea lovers to find each other.</p>
+      <section className='about-site' data-cy='about-site'>
+        <h2>Welcome</h2>
+        <p>Té Cuento was founded as a community to combine the enjoyment of a cup of tea with storytelling. 
+          Each season we offer recommendations for single-origin teas imported directly from the gardens of China, the birthplace of tea. 
+          Every tea is carefully selected to meet our standard for quality and to promote the rich, inspirational tradition of tea.</p>
+        <p>We invite you to become a part of our community and share your own stories and insights that come with each cup.</p>
+        <p>Simply select a tea to learn more, purchase, and contribute to our growing community.</p>
       </section>
     )
   }
