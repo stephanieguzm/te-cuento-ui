@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import Error from '../Error/Error'
 import Header from '../Header/Header'
 import TeaContainer from '../TeaContainer/TeaContainer'
@@ -34,6 +34,9 @@ class App extends Component {
           Every tea is carefully selected to meet our standard for quality and to promote the rich, inspirational tradition of tea.</p>
         <p>We invite you to become a part of our community and share your own stories and insights that come with each cup.</p>
         <p>Simply select a tea to learn more, purchase, and contribute to our growing community.</p>
+        <Link to='/'>
+          <button className='about-button'>TEAS</button>
+      </Link>
       </section>
     )
   }
