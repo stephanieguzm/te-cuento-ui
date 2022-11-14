@@ -1,17 +1,11 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import TeaCard from '../TeaCard/TeaCard'
 
 import './TeaContainer.css'
 import hero from '../../hero.png'
-import { useHistory } from 'react-router-dom'
 
 const TeaContainer = ({ teas }) => {
-
-  const history= useHistory()
-
-  const toAbout = () => {
-    history.push('/about')
-  }
 
   const teaCards = teas.map( tea => {
     return <TeaCard 
@@ -29,8 +23,10 @@ const TeaContainer = ({ teas }) => {
         <img className='hero-img' src={hero} alt='cup of tea in grass leaves' />
       </div>
       <p className='hero-p'>Every cup has a story to share.</p>
-      <h3>Explore this season’s selection of single-origin teas and <br/>share your own insights that come with each cup.</h3>
-        <button className='about-button' onClick={toAbout}>LEARN MORE</button>
+      <h3>Explore this season’s selection of single-origin teas <br/>and share your own insights that come with each cup.</h3>
+      <Link to='/about'>
+        <button className='about-button'>LEARN MORE</button>
+      </Link>
       <section className='tea-container' data-cy='tea-container'>
         {teaCards}
       </section>
