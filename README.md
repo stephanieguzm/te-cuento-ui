@@ -28,6 +28,9 @@ API endpoints: [teas](https://te-cuento.herokuapp.com/api/v1/teas) | [comments](
 ### Selected Tea -> About -> Home -> Page Not Found -> Home
 ![Page Not Found](https://user-images.githubusercontent.com/101955307/201581950-9d33bea7-441a-4e35-beca-6b0694c95367.gif)
 
+### Mobile View
+![Mobile View](https://user-images.githubusercontent.com/101955307/201583705-18cc9106-d8ac-4566-bd6f-a06bec4a8bf8.gif)
+
 ## Setup
 1. From your terminal, `cd` to a parent directory
 2. Clone down this repository:
