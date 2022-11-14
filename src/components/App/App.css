@@ -106,7 +106,8 @@ p,
   cursor: pointer;
 }
 
-.home-button {
+.home-button,
+.about-button {
   width: 14vw;
   height: 4vh;
   margin: 1vh;
