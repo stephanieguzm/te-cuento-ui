@@ -22,7 +22,7 @@ const TeaContainer = ({ teas }) => {
       <div className='flex-hero'>
         <img className='hero-img' src={hero} alt='cup of tea in grass leaves' />
       </div>
-      <p className='hero-p'>Every cup has a story to share.</p>
+      {/* <p className='hero-p'>Every cup has a story to share.</p> */}
       <h3>Explore this season’s selection of single-origin teas <br/>and share your own insights that come with each cup.</h3>
       <Link to='/about'>
         <button className='about-button'>LEARN MORE</button>
