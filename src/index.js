@@ -1,9 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css';
-import App from '../src/components/App/App';
+import App from '../src/components/App/App'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<BrowserRouter> <App /> </BrowserRouter>);
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <BrowserRouter>
+    <ScrollToTop />
+    <App />
+  </BrowserRouter>)
 
