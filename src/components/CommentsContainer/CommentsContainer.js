@@ -33,13 +33,11 @@ class CommentsContainer extends Component {
     return (
       <> 
         {!this.state.teaComments.length && !this.state.error && <p className="spinner" data-cy='spinner'></p>}
-        <div className='comments-container' data-cy='comments-container'>
-          <CommentForm 
-            tea_id={this.props.tea_id} 
-            getUpdatedComments={this.getUpdatedComments}/>
-          <CommentSection 
-            teaComments={this.state.teaComments}/>
-        </div>
+        <CommentForm 
+          tea_id={this.props.tea_id} 
+          getUpdatedComments={this.getUpdatedComments}/>
+        <CommentSection 
+          teaComments={this.state.teaComments}/>
         {this.state.error && <h3 className='error' data-cy='error'>{this.state.error}</h3>}  
       </>
     )
