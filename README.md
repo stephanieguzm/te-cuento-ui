@@ -16,9 +16,9 @@ Created within a 5-day sprint, Té Cuento is a responsive web application for te
 
 ### Personal Learning Goal:
 
-✔️ To enhance my understanding of backend technologies, I built a custom API to deliver and modify the application data:<br>
+✔️ To enhance my understanding of backend technologies, I built a REST API to deliver and modify the application data:<br>
 
-[Repository](https://github.com/stephanieguzm/te-cuento-api) <br>
+[API Repository](https://github.com/stephanieguzm/te-cuento-api) <br>
 API endpoints: [teas](https://te-cuento.herokuapp.com/api/v1/teas) | [comments](https://te-cuento.herokuapp.com/api/v1/comments)<br>
 
 ## Demo
