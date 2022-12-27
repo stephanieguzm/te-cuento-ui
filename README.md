@@ -8,7 +8,7 @@
 Created within a week, Té Cuento is a responsive web application for tea enthusiasts to build community through their love of tea. Imagined as a space where tea meets storytelling, users are invited to explore a limited selection of single-origin Chinese teas and share their insights with the community on a comment board.
 
 ### Learning Goals:      
-✔️ Demonstrate mastery of learned technologies: React, React Router, Asynchronous Javascript, End-to-end testing with Cypress<br> 
+✔️ Demonstrate mastery of learned technologies: React, React Router, asynchronous JavaScript, End-to-end testing with Cypress<br> 
 ✔️ Create user personas and user stories to describe target audience<br>
 ✔️ Work within constraints to deliver a product for a niche audience <br>
 
