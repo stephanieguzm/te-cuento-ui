@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import { useState, useEffect } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import Error from '../Error/Error'
 import Header from '../Header/Header'
@@ -10,22 +10,18 @@ import { getTeas } from '../../apiCalls.js'
 
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      teas: [],
-      error: ''
-    }
-  }
+const App = () => {
 
-  componentDidMount = () => {
+  const [ teas, setTeas ] = useState([])
+  const [ error, setError ] = useState('')
+
+  useEffect(() => {
     getTeas()
-      .then(data => this.setState({ teas: data }))
-      .catch(error => this.setState({ error: `We're taking care of a kettle that's boiling over! Please visit us again later.` }))
-  }
+      .then(data => setTeas(data))
+      .catch(error => setError(`We're taking care of a kettle that's boiling over! Please visit us again later.`))
+  }, [])
 
-  aboutSection = () => {
+  const aboutSection = () => {
     return (
       <section className='about-site' data-cy='about-site'>
         <h2>Welcome</h2>
@@ -41,39 +37,37 @@ class App extends Component {
     )
   }
 
-  render() {
-    return (
-      <>
-        <Header />
-        <main className='App'>
-          <div className='components-container'>
-            {!this.state.teas.length && !this.state.error && <p className='spinner' data-cy='spinner'></p>}
-            {this.state.error && <Error errorMessage={this.state.error} />}
-            {this.state.teas.length && 
-              <Switch>
-                <Route 
-                  exact path='/' 
-                  render={() => {
-                    return <TeaContainer 
-                    teas={this.state.teas} />
-                  }}/>
-                <Route 
-                  exact path='/about'
-                  render={this.aboutSection} />
-                <Route 
-                  exact path='/:id'
-                  render={({ match }) => {
-                    return <TeaPage teas={this.state.teas} teaId={parseInt(match.params.id)} />
-                  }}/>
-                <Route path='*' component={PageNotFound} />
-              </Switch>
-            }
-          </div>
-        </main>
-        <Footer />
-      </>
-    )
-  }
+  return (
+    <>
+      <Header />
+      <main className='App'>
+        <div className='components-container'>
+          {!teas.length && !error && <p className='spinner' data-cy='spinner'></p>}
+          {error && <Error errorMessage={error} />}
+          {teas && 
+            <Switch>
+              <Route 
+                exact path='/' 
+                render={() => {
+                  return <TeaContainer 
+                  teas={teas} />
+                }}/>
+              <Route 
+                exact path='/about'
+                render={aboutSection} />
+              <Route 
+                exact path='/:id'
+                render={({ match }) => {
+                  return <TeaPage teas={teas} teaId={parseInt(match.params.id)} />
+                }}/>
+              <Route path='*' component={PageNotFound} />
+            </Switch>
+          }
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
 
 }
 
