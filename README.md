@@ -16,7 +16,7 @@ Created within a week, Té Cuento is a responsive web application for tea enthus
 
 ### Personal Learning Goal:
 
-✔️ Enhance my understanding of backend technologies, I built a REST API to deliver and modify the application data:<br>
+✔️ Enhance my understanding of backend technologies, I built a REST API to GET and POST application data:<br>
 ✔️ Master my understanding of class and functional React components<br>
 
 [API Repository](https://github.com/stephanieguzm/te-cuento-api) <br>
